@@ -1,0 +1,12 @@
+{
+    "student1": {
+        "roll": 100,
+        "name": "saurav",
+        "percentage": 85
+    },
+    "student2": {
+        "roll": 102,
+        "name": "Vicky",
+        "percentage": 68
+    }
+}

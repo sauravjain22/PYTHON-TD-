@@ -1,0 +1,12 @@
+{
+  "cars": [
+    {
+      "name": "Tesla",
+      "max_speed": 200
+    },
+    {
+      "name": "BMW",
+      "max_speed": 180
+    }
+  ]
+}

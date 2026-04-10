@@ -1,0 +1,6 @@
+{
+  "max_speed": 150,
+  "min_speed": 20,
+  "lane_detection": true
+}
+

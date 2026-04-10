@@ -1,0 +1,2 @@
+This is created automatically by w mode in file section
+ This is second line
