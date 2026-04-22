@@ -1622,3 +1622,607 @@ _123abc@gmail.edu-com'''
 #     print(d)
 
 
+# name = "Saurav"
+# value  = 100
+# float = 3.14
+# None
+# True
+# False
+
+# price = 10
+# print(price + price + price)
+
+# a = b = c = 10
+# print(a + b + c)
+
+
+# import keyword
+# print(keyword.kwlist)
+
+# name = "Saurabh"
+# name[0] = "t"
+# print(name)
+# print(name[2:])
+# print(name.lower())
+# print(name.upper())
+# print(name.strip())
+# name = "t" + name[1:]
+# print(name)
+
+# age = 20
+# print("Age is " + str(age))
+# print("Age is " + age)
+
+# print(complex(5))
+
+# # val = 3 + 4j
+# # print(type(val))
+# a = input("Enter number 1: ")
+# b = input("Enter number 2: ")
+# print(int(a) + int(b))
+
+# print("10" + "10")
+# msg = "I love java"
+# # print(msg.replace("java","Python"))
+
+# # items = ['a', 'b', 'c']
+# # print("$".join(items))
+# print(msg.find("j"))
+# print(len(msg))
+
+# a = 5
+# b = True
+# print(a + b)
+
+# a = int(input("Enter a number: "))
+# if a % 2 == 0:
+#     print(f"{a} is Even Number")
+# else:
+#     print(f"{a} is a odd number")
+
+# a = 5
+# b = 10
+
+# print(a == b)
+
+# Rohan_marks = int(input("Enter your marks: "))
+# if Rohan_marks >= 40:
+#     print("Congrats You are passed")
+# else:
+#     print("Sorry you are failed")
+
+# day = input("Enter day: ")
+# if day == "Saturday" or day == "Sunday":
+#     print("Woah its a holiday")
+# else:
+#     print("Sorry its not a holiday")
+
+# users = ["Saurabh","Tarun","Vicky"]
+# User_name = input("Enter username to search: ")
+# User_index = users["User_name"]
+# if User_name in users:
+#     print(f"User found at {User_index}")
+# else:
+#     print(f"{User_name} not found")
+
+
+# print("Apple","Banana","Mango",sep="-")
+
+# print("Age:", 22, sep=" ")
+
+# print("Saurav", 22, "India",sep="/")
+
+# print("Hello",end=" ")
+# print("World")
+
+# print("2026","02","01",sep="-",end="/")
+
+# f = open("Opening.txt","w")
+# print("Hello this content is written by print function",file=f)
+# f.close()
+
+# name = "Saurav"
+# Age = 22
+# print(f"My name is {name} and my age is {Age}")
+
+
+# print("Saurabh\tJain")
+
+# print(2**3)
+# print(pow(2,3))
+
+# score = [10,20,30,25]
+# print(max(score))
+
+# a = complex(2,3)
+# print(a)
+
+# print(divmod(455,9))
+
+# import math
+
+# a = int(input("Enter 1st side: "))
+# b = int(input("Enter 2nd side: "))
+# c = int(input("Enter 3rd side: "))
+
+# s = (a + b + c)/2
+
+# Area = math.sqrt(s*(s-a)*(s-b)*(s-c))
+# print(f"Area of traingle {Area}")
+
+# city = "new delhi"
+
+# print(city.capitalize())
+# print(city.title())
+
+# name = input("Enter your name: ")
+# username = "Hello user"
+# updated_username = username.replace("user",name)
+# print(updated_username)
+
+# data = "Saurav,Jain,23,India"
+
+# info = data.split(",")
+# print(info)
+
+# words = ["Python", "is", "powerful"]
+
+# # sentence = " ".join(words)
+# print(words,sep=" ")
+# from datetime import datetime
+
+# now = datetime.now()
+
+# print(f"Report generated on: {now}")
+
+# marks = 82
+# print(f"Result: {'Pass' if marks > 40 else 'fail'}")
+
+
+
+# print("Item\tQuantity\tPrice")
+# print("Pipe\t10\320")
+
+# import time
+
+# for i in range(1, 6):
+#     print(f"\rProcessing {i}/5", end="")
+#     time.sleep(1)
+# print("Processing completed")
+
+# print("Page 1\fPage 2")
+# name = "Saurabh"
+# Salary = 200000
+# print(f"Employee:\t{name}\nSalary:\t{Salary}")
+
+# print(r"C\Admin\Users\Desktop")
+
+# name = "Saurabh is a humble person"
+# print("humble" in name)
+
+# student = {
+#     "name":"Saurabh",
+#     "Age":20
+# }
+
+# print("Saurabh" in student.values())
+
+# Attendance_list = ["Saurbah","Tarun","Vicky"]
+# name = input("Enter student name: ")
+# if name in Attendance_list:
+#     print("Present")
+# else:
+#     print("Absent")
+# text = "hello"
+# text = text.replace("h", "H")
+# print(text)
+
+# students = ["Saurabh","Tarun","Rahul"]
+# print(students[0])
+# students[0] = "Vicky"
+# print(students)
+# print(students[0:])
+
+# orders = ["Order1","order3"]
+# orders.insert(1,"Order2")
+# print(orders)
+# # orders.append("Order3")
+# print(orders)
+
+# old_users = ["manish","Sangeeta"]
+# New_users = ["Sanajana","Jatin"]
+# old_users.extend(New_users)
+# print(old_users)
+
+# votes = ["Yes", "No", "Yes", "Yes"]
+# print(votes.count("Yes"))
+
+# original = [1, 2, 3]
+# backup = original.copy()
+
+# backup.append(4)
+# print(original)
+# print(backup)
+
+# original = [1,2,3]
+# backup = original.copy()
+# backup.append(4)
+# print(backup)
+# import math
+
+# Monthly_sales_Report = [1000,2000,45200,500,45600]
+# total_sales = sum(Monthly_sales_Report)
+# Highest_sales = max(Monthly_sales_Report)
+# Lowest_sales = min(Monthly_sales_Report)
+# Avg_sales = total_sales/len(Monthly_sales_Report)
+# print(total_sales,Highest_sales,Lowest_sales,Avg_sales)
+
+# Godl = [
+#     ["jonathan","Kio","Harsh","Jelly"],
+#     ["Spower","Manya","Admino","Saumya"]
+# ]
+
+# print(Godl[1][2])
+
+# numbers = [1,2,3,4,5,6]
+# # squares = []
+# # for n in numbers:
+# #     squares.append(n*n)
+# # print(squares)
+
+# sqaures = [n*n for n in numbers]
+# print(sqaures)
+# even = []
+
+# for n in numbers:
+#     if n%2 == 0:
+#         even.append(n)
+# print(even)
+
+
+
+# Base_salary = [10000,18000,25000,35600]
+# bonus_salary = []
+# for b in Base_salary:
+#     if b > 15000:
+#         bonus_salary.append(b + (b *0.1))
+# print(bonus_salary)
+
+# Godl = ["jonathan","Kio","Harsh","Jelly"]
+# upper_cased_names = [n.upper() for n in Godl]
+# print(upper_cased_names)
+
+# names = ["aman", "saurabh", "neha"]
+
+# upper_names = [name.upper() for name in names]
+# print(upper_names)
+
+# marks = [30,50,60,70]
+# result = ["pass" if m >=40 else "Fail" for m in marks]
+# print(result)
+
+# # marks = [45, 78, 30, 90]
+
+# # result = ["Pass" if m >= 40 else "Fail" for m in marks]
+# # print(result)
+
+# data = ["Python", "", "Java", "", "C++"]
+# cleaned_data = [x for x in data if x!= ""]
+# print(cleaned_data)
+
+# matrix = [
+#     [1, 2],
+#     [3, 4],
+#     [5, 6]
+# ]
+
+# flat = [num for row in matrix for num in row]
+# # print(flat)
+# logs = ["ERROR", "INFO", "ERROR", "WARNING"]
+
+# error_logs = [log for log in logs if log == "ERROR"]
+# print(error_logs)
+
+# logs = ["ERROR","RUNNING","ERROR","WARNING"]
+# error_logs = [log for log in logs if log == "ERROR"]
+# print(error_logs)
+
+# list1 = [1,2,3]
+# list2 = [4,5,6]
+
+# for items in list1:
+#     list1.append(list2)
+# print(list1)
+# Combined_list = list1 + list2
+# print(Combined_list)
+
+# Employess_list1 = ["Saurabh","Tarun","Hemu"]
+# Employess_list2 = ["Vicky","Rahul"]
+# Employess_list1.extend(Employess_list2)
+# print(Employess_list1)
+
+# from itertools import chain
+
+# list1 = [1,2,3]
+# list2 = [4,5,6]
+
+# # result = list(chain(list1,list2))
+# # print(result)
+
+# summation = [a + b for a,b in zip(list1,list2)]
+# print(summation)
+
+# jan = [2000, 1500, 3000]
+# feb = [2200, 1600, 2800]
+# # jan.extend(feb)
+# # print(jan)
+# # print(sum(jan))
+# summation = [a+b for a,b in zip(jan,feb)]
+# print(summation)
+
+# nums = [1,2,3]
+# result = nums * 3
+# print(result)
+
+
+# names = ["A", "B"] * 2
+# print(names)
+
+# a = [1, 2]
+# b = [3, 4]
+
+# a.append(b)
+# print(a)
+
+# jan = [2000, 1500, 3000]
+# feb = [2200, 1600, 2800]
+# jan.extend(feb)
+# print(jan)
+
+# data = ["A", "B", "A", "C", "A"]
+# cleaned = [x for x in data if x! = "A"]
+# print(cleaned)
+
+# data = ["A", "B", "A", "C", "A"]
+
+# Data = list(filter(lambda x: x != "A", data))
+# print(Data)
+
+# orders = ["Completed", "Cancelled", "Pending", "Cancelled"]
+# orders = [o for o in orders if o != "Cancelled"]
+# print(orders)
+
+# nums = [1,2,3,44,554,24,67]
+# nums.sort(reverse=True)
+# print(nums)
+
+# marks = (10,20,30)
+# print(type(marks))
+
+# t = ([1, 2], 3)
+# t[0].append(4)
+# print(t)
+
+# a = 10
+# print(id(a))
+# b = 10
+# print(id(b))
+
+# list1 = [10, 20]
+# list2 = list1
+
+# print(id(list1))
+# print(id(list2))
+
+# my_set = {10,20,30}
+# print(type(my_set))
+# mm = { }
+
+# emails = ["a@gmail.com", "b@gmail.com", "a@gmail.com", "c@gmail.com"]
+# unique_elements = set(emails)
+# print(unique_elements)
+
+# s = {1, 2}
+# s.update([3, 4, 5])
+# print(s)
+
+# s = {1, 2, 3}
+# s.pop()
+# print(s)
+
+# a = {1,2,3}
+# b = {4,5,6}
+# c = a | b
+# print(c)
+
+# a = {1, 2}
+# b = {1, 2, 3}
+# print(a.issubset(b))
+# print(b.issuperset(a))
+
+# sets = {1,2,3}
+# fs = frozenset(sets)
+# print(type(fs))
+
+# python = {"A", "B", "C", "D"}
+# java = {"C", "D", "E"}
+# common = python & java
+# print(common)
+
+# required = {"Python", "SQL"}
+# candidate = {"Python", "SQL", "AWS"}
+# print(required.issubset(candidate))
+
+# order = {"pen", "book"}
+# stock = {"pen", "book", "pencil", "eraser"}
+# if order.issubset(stock):
+#     print("You can place order")
+# else:
+#     print("sorry you cannot place")
+
+# a = [1, 2, 3]
+# b = [3, 4, 5]
+# print(set(a) | set(b))
+
+# name1 = "python"
+# name2 = "java"
+
+# # print(set(name1) - set(name2))
+# s = set()
+# s.add(10)
+# s.add(20)
+# print(s)
+
+# premium_users = {"A", "B", "C", "D"}
+# trial_users = {"C", "D", "E"}
+# paid_users = premium_users - trial_users
+# print(paid_users)
+
+# A = {1, 2, 3, 4, 5}
+# B = {2, 3}
+# C = {4}
+# print(A - B - C)
+
+# permissions = {
+#     frozenset(["read", "write"]): "Editor",
+#     frozenset(["read"]): "Viewer"
+# }
+
+# print(permissions[frozenset(["read", "write"])])
+
+# student_details = {
+#     "Name":"Saurabh",
+#     "Age":22,
+#     "Course":"MscIT"
+# }
+# print(type(student_details))
+# print(student_details["Name"])
+# print(student_details.get("Location"))
+# b = set(student_details.keys())
+# print(b)
+# print(type(b))
+
+# print(student_details.keys())
+# print(student_details.get("Name"))
+
+# student_details.update({"Age":23,
+#                        "Course":"MBA"})
+# print(student_details)
+
+# student_details2 = student_details.copy()
+# print(student_details2)
+
+# for k , v in student_details.items():
+#     print(k,v)
+
+# sqaures = {x : x*x for x in range(1,6)}
+# print(sqaures)
+
+# Students =  {
+#     "24306A1065":{"Name":"Saurabh","Age":23,"Course":"MSCIT"},
+#     "24306A1050":{"Name":"Rahul","Age":22,"Course":"MSCIT"},
+# }
+# Roll_no = input("Enter student Roll number to get: ")
+# Students_details = input("Enter student details to get: ")
+# print(Students[Roll_no][Students_details])
+
+# users = {
+#     "admin":"admin123",
+#     "user1":"uspass123"
+# }
+
+# username = input("Enter username: ")
+# if username in users:
+#     print(f"User exists with key {users[username]}")
+# else:
+#     print(f"User does not exist")
+
+# d = {"a":1}
+# d["a"] = 100
+# print(d)
+
+# import copy
+# original_list = [[1,2],[3,4]]
+# Shallow_list = copy.copy(original_list)
+# Deep_list = copy.deepcopy(original_list)
+# Deep_list[0][0] = 9
+# # print(original_list,Shallow_list)
+# Shallow_list[0][0] = 7
+# # print(original_list)/
+# print(original_list)
+# print(Deep_list)
+
+# sentence = "python is easy and python is powerful"
+# words = sentence.split()
+
+# freq = {}
+
+# for word in words:
+#     freq[word] = freq.get(word, 0) + 1
+
+# print(freq)
+
+# sentence = "python is easy and python is powerful"
+# words = sentence.split()
+# freq = {}
+# for word in words:
+#     freq[word] = freq.get(word,0) + 1
+# print(freq)
+
+
+# student = {
+#     "name": "Saurabh",
+#     "age": 22,
+#     "course": "MSc IT"
+# }
+# if "marks" not in student:
+#     student["marks"] = 1
+
+# print(student)
+# if "age" in student:
+#     print("Found")
+# print(student.get("age"))
+# # print(22 in student)
+# for value in student.values():
+#     if value == 22:
+#         print("Found")
+
+# users = {
+#     "admin": "admin123",
+#     "user1": "pass456"
+# }
+
+# username = input("Enter username: ")
+# if username in users:
+#     print("User found")
+# else:
+#     print("Not found")
+
+# data = {"user": {"name": "Saurabh"}}
+# print("user" in data)
+# print("name" in data["user"])
+
+
+# Groceries = {
+#     "Milk":20,
+# #     "Bread":30
+# }
+
+# Added_groceries = {
+#     "Bun":50,
+#     "Butter":30
+# }
+
+# Groceries.update(Added_groceries)
+# print(Groceries)
+
+
+student = {
+    "name": "Saurabh",
+    "age": 22,
+    "course": "MSc IT",
+    (1,1) : "Sjain"
+}
+
+print(student)
+

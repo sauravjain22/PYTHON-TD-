@@ -1,5 +1,6 @@
-programming langauge - So as we know a language is medium to communicate in humans so similarly in computers programming language is a medium to communicate to computers like python
-similarly every language have grammar keywords and reserved words to define rules of language so in programming language this rules are known as syntax(which has set of rules) sp for example python have if ,else,while , return etc
+Programming langauge - So as we know a language is medium to communicate in humans so similarly in computers programming language is a medium to communicate to computers like python
+
+Similarly every language have grammar keywords and reserved words to define rules of language so in programming language this rules are known as syntax(which has set of rules) so for example python have if ,else,while , return etc
 
 🐍 What is Python?
 
@@ -16,7 +17,6 @@ It’s one of the most used languages in the world right now.
 Example:
 
 print("Hello, World!")
-
 
 That’s valid Python. Simple, clean, human-readable.
 
@@ -54,6 +54,7 @@ Data analysis
 Machine Learning
 
 AI models
+
 Libraries: NumPy, Pandas, TensorFlow
 
 🤖 Automation
@@ -71,6 +72,7 @@ Excel automation
 Simple games
 
 Desktop apps
+
 Libraries: Pygame, Tkinter
 
 🔐 Cybersecurity & DevOps
@@ -91,7 +93,7 @@ Executes immediately
 
 No compilation headache.
 
-That’s why changes reflect fast.
+That’s why changes reflect fast.  
 
 🧪 Python Versions (Important)
 
@@ -110,10 +112,9 @@ Example:
 import math
 print(math.sqrt(16))
 
+output: 4
 
 Instead of writing everything from scratch, you reuse smart work.
-
-
 
 What is a literal in Python?
 
@@ -137,7 +138,6 @@ All of these are literals because they are written directly.
 Literal vs Variable (Very Important)
 x = 10
 
-
 10 → literal
 
 x → variable (just a name)
@@ -148,12 +148,12 @@ Another example:
 
 name = "Saurabh"
 
-
 "Saurabh" → string literal
 
 name → variable
 
 Types of Literals in Python
+
 1️⃣ Numeric Literals
 100      # integer literal
 3.5      # float literal
@@ -164,7 +164,6 @@ Types of Literals in Python
 'Python'
 """This is a multi-line string"""
 
-
 All are string literals.
 
 3️⃣ Boolean Literals
@@ -174,12 +173,10 @@ Python has only two:
 True
 False
 
-
 ⚠️ Capital T and F are mandatory.
 
 4️⃣ Special Literal
 None
-
 
 Used to represent nothing / empty / no value.
 
@@ -220,7 +217,6 @@ python accepts string in double , single and triple quotes unlike like numbers t
 
 but for True and False and None we dont need quotes as they are reserved keywords
 and remember all first letter of thsese above three must be in capital
-
 
 >Variables:
 
@@ -445,6 +441,7 @@ while     with     yield
 👉 Total keywords: 35
 
 🧠 Keywords explained (grouped simply)
+
 🔹 Condition keywords
 
 if, elif, else
@@ -455,7 +452,7 @@ for, while, break, continue, pass
 
 🔹 Function & class
 
-def, return, lambda, class, yield
+def, return, lambda, class, yield, print
 
 🔹 Logical keywords
 
@@ -490,8 +487,6 @@ You cannot redefine them.
 🧪 How to check keywords in Python yourself
 import keyword
 print(keyword.kwlist)
-
-
 
 >Data types:
 
@@ -571,7 +566,7 @@ print("-".join(items))
 text = "Python"
 
 print(text.find("o"))   # 4
-print(text.find("x"))   # -1
+print(text.find("n"))   # -1
 
 
 ⚠️ index() gives error if not found.
@@ -699,11 +694,9 @@ b = True
 
 print(a + b)
 
-
 Output:
 
 6
-
 
 Explanation:
 
@@ -733,11 +726,12 @@ Explicit type conversion, also known as type casting, is when the programmer man
 
 5. Common Type Casting Functions
 Function	Converts To
-int()	Integer
-float()	Floating-point number
-str()	String
-bool()	Boolean
+int()	    Integer
+float()	    Floating-point number
+str()	    String
+bool()	    Boolean
 complex()	Complex number
+
 6. int() — Detailed Behavior
 int(10.9)     # 10 (decimal part removed)
 int(True)     # 1
@@ -769,7 +763,6 @@ String concatenation
 
 age = 25
 print("Age is " + str(age))
-
 
 Without casting, this would raise an error.
 
@@ -812,11 +805,12 @@ int() → numeric conversion
 Arithmetic becomes possible
 
 12. Type Conversion vs Type Casting (Clear Comparison)
-Aspect	Type Conversion	Type Casting
-Performed by	Python	Programmer
-Automatic	Yes	No
-Safety	Always safe	Can cause errors
-Example	int → float	str → int
+Aspect	        Type Conversion	    Type Casting
+Performed by	    Python	        Programmer
+Automatic	         Yes	              No
+Safety	         Always safe	    Can cause errors
+Example	           int → float	        str → int
+
 13. Common Beginner Mistakes
 Mistake 1: String Concatenation
 "10" + "20"   # "1020"
@@ -829,7 +823,6 @@ int("10") + int("20")   # 30
 Mistake 2: Forgetting to Cast Input
 age = input("Enter age: ")
 print(age + 1)   # TypeError
-
 
 Correct:
 
@@ -845,7 +838,6 @@ Use type casting when you need control
 
 Errors during casting are common and normal
 
-.
 
 🔹 What are Operators in Python?
 
@@ -860,7 +852,6 @@ Example:
 a = 10
 b = 5
 c = a + b
-
 
 Here:
 
@@ -880,6 +871,7 @@ Operator	Meaning	Example
 %	Modulus (remainder)	10 % 3 = 1
 //	Floor division	10 // 3 = 3
 **	Power	2 ** 3 = 8
+
 🔹 Real Example: Shopping Bill
 price = 499
 quantity = 3
@@ -899,7 +891,7 @@ else:
 
 Used to assign or update values.
 
-Operator	Meaning
+Operator Meaning
 =	Assign
 +=	Add and assign also known as compound operator
 -=	Subtract and assign
@@ -916,7 +908,6 @@ print(balance)
 💡 Same as:
 
 balance = balance + 500
-
 
 But shorter and cleaner.
 
@@ -951,9 +942,9 @@ print(saved_password == entered_password)
 Used when multiple conditions are involved.
 
 Operator	Meaning
-and	Both must be True
-or	Any one True
-not	Reverse result
+and	        Both must be True
+or	        Any one True
+not     	Reverse result
 🔹 Real Example: Job Eligibility
 age = 22
 degree = True
@@ -974,8 +965,8 @@ if day == "Saturday" or day == "Sunday":
 Check memory location, not value.
 
 Operator	Meaning
-is	Same object
-is not	Different object
+is	        Same object
+is not	    Different object
 🔹 Example
 a = [1, 2, 3]
 b = a
@@ -997,8 +988,9 @@ if x is None:
 Check if a value exists in a collection.
 
 Operator	Meaning
-in	Exists
-not in	Does not exist
+in	        Exists
+not in	    Does not exist
+
 🔹 Real Example: Username Check
 users = ["rahul", "saurav", "neha"]
 
@@ -1015,16 +1007,16 @@ if "free" in message:
 
 Used mostly in hardware, networking, optimizations.
 
-Operator	Meaning
-&	AND
-`	`
-^	XOR
-~	NOT
-<<	Left shift
->>	Right shift
-🔹 Example
-a = 5   # 101
-b = 3   # 011
+    Operator	Meaning
+        &	AND
+        `	`
+        ^	XOR
+        ~	NOT
+        <<	Left shift
+        >>	Right shift
+        🔹 Example
+        a = 5   # 101
+        b = 3   # 011
 
 print(a & b)   # 1
 
@@ -1048,7 +1040,6 @@ Membership → present or not
 Bitwise → low-level operations
 
 
-.
 
 🔹 What are Operators in Python?
 
@@ -1103,11 +1094,11 @@ else:
 Used to assign or update values.
 
 Operator	Meaning
-=	Assign
-+=	Add and assign
--=	Subtract and assign
-*=	Multiply and assign
-/=	Divide and assign
+    =	Assign
+    +=	Add and assign
+    -=	Subtract and assign
+    *=	Multiply and assign
+    /=	Divide and assign
 🔹 Real Example: Bank Balance
 balance = 1000
 balance += 500   # salary credited
@@ -1177,8 +1168,8 @@ if day == "Saturday" or day == "Sunday":
 Check memory location, not value.
 
 Operator	Meaning
-is	Same object
-is not	Different object
+    is	    Same object
+    is not	Different object
 🔹 Example
 a = [1, 2, 3]
 b = a
@@ -1535,7 +1526,7 @@ Output:
 
 Saurav | 22
 
-🔹 Separator vs + operator (very important difference)
+🔹 Separator vs '+' operator (very important difference)
 
 ❌ Using +:
 
@@ -1570,9 +1561,6 @@ Default sep	" " (space)
 Custom separator	`, - /
 Empty separator	sep=""
 Used with	print() only
-
-
-
 
 
 
@@ -1785,16 +1773,12 @@ print()
 ✅ Used mainly for output & debugging
 
 🔥 Quick comparison table
-Feature	Purpose
-sep	Separator between values
-end	Ending after print
-file	Output destination
-flush	Immediate output
+Feature	    Purpose
+sep	        Separator between values
+end	        Ending after print
+file	    Output destination
+flush	    Immediate output
 f-string	Best formatting
-
-
-
-
 
 
 
@@ -1970,8 +1954,6 @@ int()	Convert to integer
 float()	Convert to float
 complex()	Complex numbers
 divmod()	Division + remainder
-
-
 
 
 
@@ -2622,17 +2604,19 @@ handling file paths 💻
 Without escape sequences, output would look messy and unreadable.
 
 Most Important Escape Sequences (You MUST know)
-Escape	Meaning	Real Use
-\n	New line	Reports, logs
-\t	Tab space	Tables, bills
-\\	Backslash	File paths
-\'	Single quote	SQL, text
-\"	Double quote	JSON, messages
-\r	Carriage return	Progress bars
-\b	Backspace	Formatting
-\f	Form feed	Printing
-1️⃣ \n – New Line
-print("Invoice\nCustomer Name\nTotal Amount")
+Escape	 Meaning	Real Use
+    \n	New line	Reports, logs
+    \t	Tab space	Tables, bills
+    \\	Backslash	File paths
+    \'	Single quote	SQL, text
+    \"	Double quote	JSON, messages
+    \r	Carriage return	Progress bars
+    \b	Backspace	Formatting
+    \f	Form feed	Printing
+    
+    
+ 1️⃣ \n – New Line
+    print("Invoice\nCustomer Name\nTotal Amount")
 
 
 Output:
@@ -2737,6 +2721,7 @@ printing systems
 
 old report formats
 
+
 Raw Strings (r"") – Escape Killer 💣
 
 Sometimes you don’t want escape sequences to work.
@@ -2814,8 +2799,9 @@ dictionary
 Python has 2 membership operators:
 
 Operator	Meaning
-in	Value exists in the sequence
-not in	Value does NOT exist in the sequence
+in	        Value exists in the sequence
+not in	    Value does NOT exist in the sequence
+
 🔹 1️⃣ in operator
 Example 1: With list
 nums = [1, 2, 3, 4]
@@ -3058,9 +3044,6 @@ Hello
 🔹 One-line Exam Answer ✍️
 
 replace() is a string method used to replace a substring with another substring and returns a new string.
-
-
-
 
 
 What is a List in Python?
@@ -3317,8 +3300,9 @@ print(bonus_salaries)
 Example 3: Convert Strings to Uppercase
 names = ["aman", "saurabh", "neha"]
 
-upper_names = [name.upper() for name in names]
+upper_names = [names.upper() for name in names]
 print(upper_names)
+
 
 Example 4: Conditional Expression (If–Else inside)
 marks = [45, 78, 30, 90]
@@ -3716,7 +3700,7 @@ print(data)
 4️⃣ Using filter() (Functional Style)
 data = ["A", "B", "A", "C", "A"]
 
-data = list(filter(lambda x: x != "A", data))
+Data = list(filter(lambda x: x != "A", data))
 print(data)
 
 
@@ -3983,7 +3967,8 @@ Speed	Slower	Faster
 Methods	Many	Very few
 Memory	More	Less
 Safety	Less	More
-Use case	Dynamic data	Fixed data
+Use case Dynamic data	Fixed data
+
 🧠 Interview Questions (MOST ASKED)
 Q1️⃣ Why tuples are faster than lists?
 
@@ -4140,6 +4125,7 @@ print(id(list2))
 ✔ Both variables point to same memory location
 
 🔹 id() with Strings
+
 s1 = "hello"
 s2 = "hello"
 
@@ -4163,9 +4149,9 @@ IDs may differ depending on optimization.
 
 🔹 Real-Life Analogy 🧠
 Python Term	Real Life
-Object	House
+Object	    House
 Variable	Person name
-id()	House address
+id()	    House address
 
 Two people can point to the same house → same id.
 
@@ -4280,9 +4266,9 @@ This is why sets are used in real projects.
 
 3️⃣ Important Properties of Sets
 Property	Set
-Ordered	❌ No
+Ordered	    ❌ No
 Duplicates	❌ Not allowed
-Mutable	✅ Yes
+Mutable	    ✅ Yes
 Indexing	❌ Not allowed
 Fast lookup	✅ Yes
 
@@ -4392,9 +4378,9 @@ print(a.issubset(b))      # True
 print(b.issuperset(a))    # True
 
 8️⃣ Set vs List vs Tuple (Interview Table)
-Feature	List	Tuple	Set
-Ordered	✅	✅	❌
-Mutable	✅	❌	✅
+Feature	    List Tuple Set
+Ordered	    ✅	✅	❌
+Mutable	    ✅	❌	✅
 Duplicates	✅	✅	❌
 Indexing	✅	✅	❌
 Performance	Medium	Fast	⚡ Fastest
@@ -4531,10 +4517,11 @@ s = {(1, 2, 3)}
 Mutable vs Immutable (Quick Compare)
 Type	Mutable?
 list	✅ Yes
-set	✅ Yes
+set	    ✅ Yes
 dict	✅ Yes
 tuple	❌ No
 string	❌ No
+
 Set vs Frozen Set (Very Good Interview Point)
 🔹 Set (Mutable)
 s = {1, 2, 3}
@@ -4672,10 +4659,11 @@ Output:
 True
 
 5️⃣ UNION vs INTERSECTION vs SUBSET (Quick Table)
-Operation	Meaning
-Union	All unique elements
-Intersection	Common elements
-Subset	One set fully inside another
+Operation	        Meaning
+Union	            All unique elements
+Intersection	    Common elements
+Subset	            set fully inside another
+
 6️⃣ REAL CODING CHALLENGES (Interview Style)
 🔹 Find total unique customers
 online = {"A", "B", "C"}
@@ -4726,7 +4714,7 @@ Next I can:
 
 Your call 😎
 
-one que does union intersecion subset works with list strinfgs or tuple or it works only with sets
+one que does union intersecion subset works with list strings or tuple or it works only with sets
 
 🔥 Excellent question — this is exactly the kind of doubt interviewers test.
 
@@ -4834,10 +4822,10 @@ Say this confidently — 100% correct answer.
 
 8️⃣ Quick Summary Table
 Data Type	Direct Support?
-Set	✅ Yes
-List	❌ No
-Tuple	❌ No
-String	❌ No
+Set	        ✅ Yes
+List	    ❌ No
+Tuple	    ❌ No
+String	    ❌ No
 
 (All non-set types need conversion)
 
@@ -4921,7 +4909,7 @@ print(a.issubset(empty))   # False
 
 Empty Set vs Empty Dictionary
 Syntax	Meaning
-{}	Empty dictionary
+{}	    Empty dictionary
 set()	Empty set
 One-Line Interview Answer (Perfect)
 
@@ -4972,6 +4960,7 @@ Sets don’t have positions
 Concatenation means joining in order
 
 Union is the logical operation for sets
+
 What is Difference in Sets?
 
 Difference = elements present in one set but NOT in the other
@@ -5046,8 +5035,9 @@ Output:
 
 Difference vs Symmetric Difference
 Operation	Meaning
-A - B	Only in A
-A ^ B	Only in A or B (not common)
+A - B	    Only in A
+A ^ B	    Only in A or B (not common)
+
 print(A ^ B)
 
 Difference Update (In-place)
@@ -5191,11 +5181,11 @@ ages = [22, 23]
 student = {"name": "Saurabh", "age": 22}
 
 Why dictionary is better:
-Feature	Dictionary	List
-Access	By key (fast)	By index
-Meaning	Clear	Confusing
-Real-world data	Perfect	Not ideal
-Speed	Faster lookup	Slower
+Feature	    Dictionary	        List
+Access	     key (fast)	        By index
+Meaning	     Clear	            Confusing
+Real-world  data	Perfect	    Not ideal
+Speed	     Faster lookup	    Slower
 
 👉 Interview line:
 
@@ -5334,11 +5324,12 @@ print(d)
 👉 Dictionary changes in same memory, unlike tuple.
 
 1️⃣1️⃣ Dictionary vs List vs Tuple
-Feature	Dict	List	Tuple
-Mutable	✅	✅	❌
-Indexed	❌	✅	✅
-Key-value	✅	❌	❌
-Speed	Fast lookup	Medium	Fast
+Feature	        Dict	List	Tuple
+Mutable	        ✅	   ✅	  ❌
+Indexed	        ❌	   ✅	  ✅
+Key-value	    ✅	   ❌	  ❌
+Speed	        Fast lookup	Medium	Fast
+
 1️⃣2️⃣ Common Errors
 {"a": 1, "a": 2}  # Last value overrides
 
@@ -5376,7 +5367,52 @@ Q6. What is hashing in dictionary?
 Q7. Time complexity of dictionary lookup?
 ➡ Average: O(1)
 
-Q8. Shallow copy vs Deep copy?
+🧠 Shallow Copy vs Deep Copy (Python)
+👉 1. Shallow Copy
+
+💡 Meaning:
+
+A shallow copy creates a new object,
+BUT inside objects (nested items) are still shared (same reference).
+
+📌 Example:
+import copy
+
+original = [[1, 2], [3, 4]]
+shallow = copy.copy(original)
+
+shallow[0][0] = 100
+
+print(original)  # [[100, 2], [3, 4]]
+print(shallow)   # [[100, 2], [3, 4]]
+⚠️ Why?
+Outer list = copied ✅
+Inner lists = SAME reference ❌
+
+👉 So change inside → affects both
+
+👉 2. Deep Copy
+
+💡 Meaning:
+
+A deep copy creates a completely independent copy
+👉 everything is duplicated (no shared reference)
+
+📌 Example:
+import copy
+
+original = [[1, 2], [3, 4]]
+deep = copy.deepcopy(original)
+
+deep[0][0] = 100
+
+print(original)  # [[1, 2], [3, 4]]
+print(deep)      # [[100, 2], [3, 4]]
+✅ Why?
+Outer list = copied
+Inner list = ALSO copied
+
+👉 So change doesn’t affect original
 ➡ copy() copies references, not nested objects
 
 1️⃣4️⃣ Real Coding Challenge (Try this)
@@ -5417,7 +5453,7 @@ freq = {}
 for word in words:
     freq[word] = freq.get(word, 0) + 1
 
-print(freq can u explain this code
+print(freq) can u explain this code
 
 Yes bro 👍 this is a very important interview + real-life code.
 Let’s break it line by line, super clearly, like how you’d explain to a teacher or interviewer.
@@ -5660,7 +5696,7 @@ for value in student.values():
 
 📌 Interview note:
 
-in student is same as in student.keys()
+is student is same as in student.keys() - yes
 
 🔹 Real-Life Example (Login Check)
 users = {
@@ -5682,10 +5718,12 @@ else:
 
 🔹 Membership Operator vs get()
 Using in
+
 if "age" in student:
     print(student["age"])
 
 Using get()
+
 print(student.get("age"))
 
 
@@ -5697,7 +5735,6 @@ get() → safely retrieves value
 
 🔹 Time Complexity (Interview Gold ⭐)
 "key" in dictionary
-
 
 ⏱ O(1) average time
 Because dictionary uses hashing
@@ -5734,14 +5771,14 @@ if "marks" not in student:
 
 “In dictionaries, the membership operator checks only keys and works in constant time due to hashing.”
 
->update in dictionary:
+>Update in dictionary:
 
 groceries_prices = {"milk":20,"bread":30,"eggs":40}
 added_groceries= {"bun":46,"jam":79}
 groceries_prices.update(added_groceries)
 print(groceries_prices)
 
-another example:
+Another example:
 groceries_prices = {"milk":20,"bread":30,"eggs":40,"milk":30}
 print(groceries_prices)
 
@@ -5785,6 +5822,74 @@ students = {
 }
 print(students)
 
+Core Rule (VERY IMPORTANT)
+
+In Python dictionaries:
+
+👉 Keys must be hashable
+👉 Values can be anything (no restriction)
+
+🧠 What does "hashable" mean?
+
+A hashable object is one that:
+
+Has a fixed value (doesn’t change after creation)
+Has a unique hash value (used internally for fast lookup)
+
+👉 This is why dictionaries are O(1) fast (hashing concept you asked earlier 🔥)
+
+✅ Allowed as Keys (Hashable Types)
+str (string)
+int (integer)
+float
+tuple (ONLY if it contains hashable elements)
+d = {
+    "name": "Saurabh",
+    1: "one",
+    3.14: "pi",
+    (1, 2): "tuple key"
+}
+❌ Not Allowed as Keys (Unhashable Types)
+list
+set
+dict
+d = {
+    [1, 2]: "not allowed"   # ❌ ERROR
+}
+
+👉 Because these are mutable (changeable)
+
+⚠️ Important Twist (Interview Question 🔥)
+
+👉 Tuple is allowed BUT only if inside elements are immutable
+
+# ✅ Valid
+d = {(1, 2): "ok"}
+
+# ❌ Invalid (because list inside tuple is mutable)
+d = {(1, [2, 3]): "error"}
+🎯 Final Concept (Perfect Line for Interview)
+
+👉 "Dictionary keys must be hashable (immutable), while values can be of any data type."
+
+🤯 Why Python does this?
+
+Because dictionary uses a concept called:
+
+👉 Hashing
+
+Python converts key → hash value → stores in memory
+If key changes → hash breaks → data lost ❌
+So Python only allows stable (immutable) keys
+💡 Simple Real-Life Analogy
+
+Think dictionary like:
+
+Key = Aadhaar number (fixed)
+Value = Person details (can change)
+
+👉 Aadhaar (key) must stay constant
+👉 Details (value) can change anytime
 
 1️⃣ What is a Copy?
 
