@@ -2217,12 +2217,321 @@ _123abc@gmail.edu-com'''
 # print(Groceries)
 
 
-student = {
-    "name": "Saurabh",
-    "age": 22,
-    "course": "MSc IT",
-    (1,1) : "Sjain"
-}
+# student = {
+#     "name": "Saurabh",
+#     "age": 22,
+#     "course": "MSc IT",
+#     (1,1) : "Sjain"
+# }
 
-print(student)
+# print(student)
 
+# a = [1, 2, 3]
+# b = a
+# b.append(4)
+# print(a)
+
+# a = [1, 2, [3, 4]]
+# b = a[:]
+
+# b[2].append(5)
+# print(a)
+
+# emp = {
+#     "name": "Saurabh",
+#     "skills": ["Python", "SQL"]
+# }
+
+# emp2 = emp.copy()
+# emp2["skills"].remove("SQL")
+
+# print(emp)
+
+# student = ["Saurabh",22,True]
+# for i in student:
+#     print(i)
+
+# for i in range(6):
+#     print(i)
+
+# balance = 20000
+# Withdraw_amount = int(input("Enter amount to withdraw: "))
+# if Withdraw_amount <= balance:
+#     print(f"{Withdraw_amount} withdrawn successfully")
+# else:
+#     print(f"{Withdraw_amount} is higher than {balance} so transaction failed")
+
+# salary = 60000
+# bonus = 5000 if salary >= 50000 else 2000
+# print(bonus)
+
+# print("Yes" if [] else "No")
+
+# students = {
+#     "name":"Saurav",
+#     "age":20,
+#     "Salary":30000
+# }
+
+# for value in students.values():
+#     print(value)
+
+# for i in students.items():
+#     print(i[1])
+
+# student = [10,20,30,40]
+# for stud in range(len(student)):
+#     s = stud + 1
+#     print(f"The s roll number for student {s} is {student[stud]} ")
+
+# scores = [10,25,46,5,6,78,45,4,6,0]
+# highest = scores[0]
+# for score in scores:
+#     if highest < score:
+#         highest = score
+
+# print(f"Highest score is {highest}")
+
+# scores = [10,25,46,5,6,78,45,4,6,0]
+# highest = scores[0]
+# for score in scores:
+#     if highest < score:
+#         highest = score
+# print(f"Highest score is {highest}")
+
+# i = 1
+# while i <= 5:
+#     print(i)
+#     i += 1
+
+# correct_password = "admin123"
+# attempts = 3
+# while attempts > 0:
+#     password = input("Enter your password: ")
+
+#     if password == correct_password:
+#         print("Login successful")
+#         break
+#     attempts-=1
+#     print(f"Incorrect password number of attempts left {attempts} ")
+
+# if attempts == 0:
+#     print("You ran out of attempts , account Locked!")
+    
+# data = [10,20,30,40]
+# index = 0
+# while index < len(data):
+#     print(data[index])
+#     index += 1
+
+# while True:
+#     num = int(input("Enter any number(o to exit):  "))
+#     if num == 0:
+#         break
+#     print(f"you entered {num}")
+
+# i = 0
+# while i < 5:
+#     i += 1
+#     if i == 3:
+#         continue
+#     print(i)
+
+
+# number = int(input("Enter -1 to stop: "))
+
+# while number != -1:
+#     print("You entered:", number)
+#     number = int(input("Enter -1 to stop: "))
+
+# import random
+# print(random.random())4
+# print(random.randint(1,7))
+# rn = []
+# for i in range(1,51):
+#     rn.append(i)
+
+# print(rn)
+
+# rn  = [(random.sample(1,51,5))]
+# print(rn)
+# print(max(rn))
+# rn = []
+# for i in random.randrange(1,51):
+#     rn.append(i)
+# print(rn)
+
+
+# import random
+# numbers = [random.randrange(1,51) for i in range(5)]
+# print(numbers)
+# print(max(numbers))
+
+# for i in range(1,60):
+#     for j in range(1,1+i):
+#         print("*",end="")
+#     print()
+
+# def greet():
+#     Welcome = input("Enter your name: ")
+#     print(f"Hello {Welcome}")
+#     return Welcome
+
+# # print(greet())
+# greet()
+# name = input("Enter your name: ")
+# def greet(input):
+    
+# names = "Saurav","Tarun"
+
+# def greet(name):
+#         print(f"Welcome {name} good morning")
+#         print("have a nice day")
+# for name in names:
+#     greet(name)
+
+# names = ["Saurabh","Tarun"]
+# def greet(name):
+#     print(f"welcome {name} good morning")
+#     print("Have a nice day")
+# for name in names:
+#     greet(name)
+
+# names = ["Saurabh","Tarun"]
+# def greet(name):
+#     print(f"")
+
+# names = ["Saurabh","Tarun"]
+# def greet(name):
+#     print(f"welcome {name} good morning")
+#     print("Have a nice day")
+# for name in names:
+#     if name[0].startswith("S"):
+#         greet(name)
+#         print()
+#         break
+# else:
+#     print("No name starts with S")
+
+# number = int(input("Enter number: "))
+# def func(number):
+#     if number % 2 == 0:
+#         print(f"{number} is even")
+#     else:
+#         print(f"{number} is odd")
+
+# # func(number)
+# a = int(input("Enter first number: "))
+# b = int(input("Ener seconf number: "))
+# def add(a,b):
+#     result = a + b
+#     print(f"Result: {result}")
+
+# add(a,b)
+# def add(a,b):
+#     return a + b 
+
+# result = add(4,5)
+# print(result)
+
+# def calculate_total(amount,tax):
+#     return amount + (amount*tax)
+# calculate_total = calculate_total(100,5)
+# print(calculate_total)
+
+# def check(num):
+#     if num > 0:
+#         return "Positive"
+#     return "Negative or Zero"
+# print(check(5))
+
+
+# def Arithmetic(num1,num2):
+#     add = num1 + num2
+#     sub = num1 - num2
+#     multi = num1*num2
+#     return add,sub,multi
+
+# val1 = int(input("Enter value 1: "))
+# val2 = int(input("Enter value 2: "))
+# res1,res2,res3 = Arithmetic(val1,val2)
+# print(f"The addition of {val1} and {val2} is {res1}")
+# print(f"The subtraction of {val1} and {val2} is {res2}")
+# print(f"The multiplication of {val1} and {val2} is {res3}")\
+
+# def greet(name,age):
+#     print(f"Name {name}")
+#     print(f"Age {age}")
+
+# greet("saurabh",22)
+# greet(age=22,name="Saurabh")
+
+# def add(*numbers):
+#     print(type(numbers))
+#     return(sum(numbers))
+
+# Total = add(10,20,30,40)
+# print(Total)
+
+# def calculate_total(*prices):
+#     total = 0
+#     for price in prices:
+#         total += price
+#     return total
+        
+# print(calculate_total(10,20,30))
+
+# def student_details(**details):
+#     print(details)
+
+# student_details(Name="Saurabh",Age=22,Course="Mscit")
+# print(type(student_details))
+
+# def user_data(**data):
+#     for key,value in data.items():
+#         print(f"{key} : {value}")
+
+# user_data(Name = "Saurabh",Age = 22)
+
+# def demo(a, b, c=10, *args, **kwargs):
+#     print(a, b, c)
+#     print(args)
+#     print(kwargs)
+
+# demo(5,6,4,56,56,name = "Saurabh")
+
+# def test(a, *args, **kwargs):
+#     print(a)
+#     print(args)
+#     print(kwargs)
+
+# test(10, 20, 30, x=100)
+
+# def length_checker(*args):
+#     print(len(args))
+
+# list = ["Saurav","idjas",20,40,50]
+# length_checker(list) 
+
+# def calculate_percentage(sid,sname,*marks):
+#     if len(marks) == 0:
+#         print(f"Student with sid {sid} and name {sname} did not appear for any exam")
+#     else:
+#         percentage = sum(marks)/len(marks)
+#         print(f"The percentage of student is {percentage}%")
+
+
+# calculate_percentage(21,"Saurabh",90,90,90,90,90)
+# calculate_percentage(20,"Saurabh")
+
+
+# def calcualtion(sid,sname,*extra,**marks):
+#     if len(marks) == 0:
+#         print(f"Student did not appear for any exam")
+#     else:
+#         percentage = sum(marks.values()) / len(marks)
+#         print(f"Student wiht {sid} and {sname} got {percentage}%")
+#         print(f"Student with {sid} does do {extra}")
+
+
+# calcualtion(20,"Tarun","Footplay","Swimming",Sub1 = 90,sub2 = 90)

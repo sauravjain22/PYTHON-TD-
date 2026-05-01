@@ -5981,6 +5981,7 @@ deep     ──► [1, 2, ──► [10, 20]]
 
 4️⃣ Real-Life Example 🧠
 👨‍💼 Employee Records
+
 employee = {
     "name": "Saurabh",
     "skills": ["Python", "SQL"]
@@ -6002,11 +6003,12 @@ emp2["skills"].append("Django")
 Only emp2 updated ✔
 
 5️⃣ Copy Methods (IMPORTANT)
-Method	Type
+Method	    Type
 list.copy()	Shallow
 dict.copy()	Shallow
 copy.copy()	Shallow
 copy.deepcopy()	Deep
+
 6️⃣ Shallow vs Deep Copy (INTERVIEW TABLE)
 Feature	Shallow Copy	Deep Copy
 Outer object	New	New
@@ -6014,6 +6016,7 @@ Inner objects	Shared	New
 Memory usage	Less	More
 Speed	Faster	Slower
 Safe for nested data	❌ No	✅ Yes
+
 7️⃣ Interview Questions & Answers
 Q1. When to use shallow copy?
 
@@ -6138,6 +6141,7 @@ print(emp)
 What happens and WHY?
 
 Q7️⃣ Find the bug
+
 def update_list(lst):
     lst = lst.copy()
     lst.append(100)
@@ -6224,6 +6228,7 @@ A for loop is used to repeat a task again and again.
 A for loop is used to iterate over a sequence like list, tuple, string, or range.
 
 🔹 Basic syntax
+
 for variable in sequence:
     statements
 
@@ -6351,6 +6356,7 @@ Value if True
 Value if False
 
 🔹 Basic Example
+
 ✅ Example 1: Positive or Negative
 num = 10
 result = "Positive" if num > 0 else "Negative"
@@ -6370,6 +6376,7 @@ else:
     result = "Negative"
 
 🔹 Real Coding Example 1 (Interview Style)
+
 ✅ Check Even or Odd
 num = 7
 result = "Even" if num % 2 == 0 else "Odd"
@@ -6619,7 +6626,8 @@ Salary
 
 will print keys only
 
-so to print both keys and values using ffor loop in dictionary we do something like this
+so to print both keys and values using for loop in dictionary we do something like this
+
 students = {
     "name":"Saurav",
     "age":20,
@@ -6656,7 +6664,8 @@ students = {
 for i in students.items():
     print(i[1])
 
->Using list as range function:
+
+>using list as range function:
 
 example:
 
@@ -6801,9 +6810,10 @@ CLI tools
 
 🎯 Interview Questions
 ❓ Q1: Difference between for and while?
-for loop	while loop
+for loop	                while loop
 Used when iterations known	Used when condition-based
-Cleaner for sequences	Flexible for dynamic logic
+Cleaner for sequences	    Flexible for dynamic logic
+
 ❓ Q2: What causes infinite loop?
 
 Condition never becomes False
@@ -6999,8 +7009,9 @@ Why?
 
 🔥 FAANG-Level Interview Questions
 Q1: Difference between random.randint() and random.randrange()?
-randint	randrange
+randint	        randrange
 Inclusive	Stop is exclusive
+
 Simple	More flexible (step allowed)
 Q2: Why use random.seed()?
 
@@ -7473,9 +7484,6 @@ If you remember this 4-rule formula,
 you can solve any pattern question.
 
 
-
-.
-
 🔥 1. What is a Function in Python?
 
 A function is a reusable block of code that performs a specific task.
@@ -7583,10 +7591,8 @@ def greet(name):
         print("have a nice day")
 for name in names:
     if name[0].startswith("S"):
-          
         greet(name)
         print()
-
 
 >To check if input number is even or odd
 example:
@@ -7637,7 +7643,6 @@ Output can be stored
 Good coding practice
 
 
-.
 
 🔥 PART 1: Difference Between print() and return
 🟢 1️⃣ print()
@@ -7757,11 +7762,12 @@ Arguments → 1 (5)
 b uses default value 10
 
 🔥 Quick Comparison Table
-Concept	Meaning
-print	Displays output
-return	Sends value back
+Concept	    Meaning
+print	    Displays output
+return	    Sends value back
 parameter	Variable in function definition
 argument	Value passed to function
+
 🔥 Advanced Interview Question
 
 👉 Can a function have multiple return statements?
@@ -7831,6 +7837,7 @@ res1,res2,res3 = arithmetic(val1,val2)
 print(f"The addition of {val1} and {val2} is {res1}")
 print(f"The subtraction of {val1} and {val2} is {res2}")
 print(f"The multiplication of {val1} and {val2} is {res3}")
+
 🔥 Step 1: Function Definition
 def arithmetic(num1, num2):
 
@@ -8053,7 +8060,7 @@ res1, res2 = arithmetic(10, 5)
 
 Will it work? Why or why not? 🔥
 
-returnd three and only teo were assigned
+returnd three and only two were assigned
 
 🔥 Excellent. That’s the correct thinking.
 
@@ -8132,7 +8139,6 @@ Database queries
 Data science pipelines
 
 Understanding unpacking properly shows strong Python fundamentals.
-
 
 Types of Arguments in Python
 
@@ -9286,12 +9292,9 @@ def student_details(sid,sname,*extra,**marks):
 
     print()
 
-student_details(10,"Saurav","Football",subj = 40, subj2 = 60, subj3 = 50)
-student_details(5,"saurav","tennis","Badminton",subj = 10,subj2 = 40)
+student_details(10,"Saurav","Football",subj1 = 40, subj2 = 60, subj3 = 50)
+student_details(5,"saurav","tennis","Badminton",subj1 = 10,subj2 = 40)
 
-
-
-.
 
 📌 1️⃣ What is a Docstring?
 
