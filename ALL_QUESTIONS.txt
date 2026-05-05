@@ -1,0 +1,162 @@
+Question:
+
+Print numbers from N to 1 using recursion
+
+Answer:
+def print_numbers(n):
+    if n == 0:
+        return
+    print(n)
+    print_numbers(n - 1)
+
+n = int(input("Enter a number: "))
+print_numbers(n)
+Explanation:
+
+This program uses recursion, where a function calls itself.
+
+The base case is n == 0. When this happens, the function stops.
+Otherwise, it first prints n.
+Then it calls itself with n - 1, reducing the value step by step.
+This continues until it reaches 0.
+
+Example flow for n = 3:
+
+print(3) → calls print(2)
+print(2) → calls print(1)
+print(1) → calls print(0)
+print(0) → stops
+
+Output:
+3 2 1
+
+
+
+
+
+
+
+
+Question:
+
+Sum of First N Natural Numbers
+
+Answer:
+def sum_n(n):
+    if n == 0:
+        return 0
+    return n + sum_n(n - 1)
+
+n = int(input("Enter a number: "))
+print("Sum =", sum_n(n))
+Explanation:
+
+This solution uses recursion to calculate the sum.
+
+The base case is n == 0, which returns 0.
+For any other value, the function returns n + sum_n(n - 1).
+This keeps breaking the problem into smaller parts until it reaches 0.
+
+Example for n = 4:
+
+sum(4) = 4 + sum(3)
+sum(3) = 3 + sum(2)
+sum(2) = 2 + sum(1)
+sum(1) = 1 + sum(0)
+sum(0) = 0
+
+Final calculation:
+4 + 3 + 2 + 1 = 10
+
+
+
+
+
+
+Question:
+
+Count Digits in a Number
+
+Answer:
+n = int(input("Enter a number: "))
+n = abs(n)
+
+count = 0
+
+if n == 0:
+    count = 1
+else:
+    while n > 0:
+        count += 1
+        n //= 10
+
+print("Digits =", count)
+Explanation:
+
+The idea is simple: remove one digit at a time and count how many times you can do that.
+
+n // 10 removes the last digit
+👉 Example:
+1234 → 123
+123 → 12
+12 → 1
+1 → 0
+Every time we remove a digit, we increase count by 1.
+🔍 Step-by-step Example (n = 1234):
+Step 1: n = 1234 → count = 1
+Step 2: n = 123 → count = 2
+Step 3: n = 12 → count = 3
+Step 4: n = 1 → count = 4
+Step 5: n = 0 → stop
+
+👉 Final Answer = 4 digits
+
+⚠️ Important Points:
+abs(n) is used to handle negative numbers (e.g., -567 → 3 digits)
+Special case: 0 has 1 digit, so we handle it separately
+
+
+
+
+
+
+
+
+
+Question:
+
+Reverse a String (Basic Version) — Explanation of this code
+
+Answer:
+s = input("Enter a string: ")
+
+rev = ""
+for ch in s:
+    rev = ch + rev
+
+print("Reversed string =", rev)
+Explanation:
+
+Don’t worry — this is very simple once you see the flow 👇
+
+👉 Key idea:
+We are adding each new character at the front of the string.
+
+🔍 Step-by-step (Example: s = "abc")
+Step	ch	rev (new value)
+Start	-	""
+1	a	"a"
+2	b	"ba"
+3	c	"cba"
+💡 What is happening exactly?
+First iteration:
+rev = "a" + "" = "a"
+Second iteration:
+rev = "b" + "a" = "ba"
+Third iteration:
+rev = "c" + "ba" = "cba"
+
+👉 Every time:
+
+ch (new character) is placed before the old rev
+

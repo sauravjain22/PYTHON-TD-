@@ -9454,8 +9454,8 @@ Infosys
 Docstrings are mandatory.
 
 📌 9️⃣ Difference: Comment vs Docstring
-Comment	Docstring
-Uses #	Uses """ """
+        Comment	Docstring
+Uses    #	    Uses """ """
 Not stored	Stored in doc
 Not accessible	Accessible via help()
 For developers	For documentation
@@ -9556,8 +9556,6 @@ Project becomes messy.
 
 With docstring:
 Project becomes professional.
-
-
 
 access it and save
 
@@ -9696,9 +9694,6 @@ def divide(a,b):
 
 print(divide(4,0))
 
-
-
-.
 
 🔁 What is a Recursive Function?
 
@@ -9922,8 +9917,6 @@ Think:
 
 You just multiply current num with it.
 
-
-)
 
 🔹 1️⃣ What is Recursion?
 

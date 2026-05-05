@@ -1,14 +1,14 @@
 #How to calculate area of traingle
-import math
+# import math
 
-a = int(input("Enter 1st side:")) 
-b = int(input("Enter 2nd side:"))
-c = int(input("Enter 3rd side:"))
+# a = int(input("Enter 1st side:")) 
+# b = int(input("Enter 2nd side:"))
+# c = int(input("Enter 3rd side:"))
 
-s = (a + b + c) / 2     #this is semi parameter means half of sides
+# s = (a + b + c) / 2     #this is semi parameter means half of sides
 
-area = math.sqrt(s*(s - a)*(s - b)*(s - c))
-print("Area of triangle is", area)
+# area = math.sqrt(s*(s - a)*(s - b)*(s - c))
+# print("Area of triangle is", area)
 
 
 
@@ -481,7 +481,6 @@ print("Area of triangle is", area)
  
 
 # print("Thank you")
-
 
 
 

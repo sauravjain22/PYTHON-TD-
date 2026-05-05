@@ -2542,4 +2542,143 @@ _123abc@gmail.edu-com'''
 #     return a + b
 
 # print(add(4,5))
-# print(add.__doc__)
+# # print(add.__doc__)
+# doc = add.__doc__
+# print(doc)
+
+
+# def fact(num):
+#     factorial = 1
+#     while num > 1:
+#         factorial *= num
+#         num -= 1
+#     return factorial
+    
+# n= int(input("Enter number to get its factorial: "))
+# print(fact(n))
+
+# def fact(num):
+#     if num == 1:
+#         return 1
+#     else:
+#         factorial = num * fact(num-1)
+#         return factorial
+    
+# n = int(input("Enter number: "))
+# print(fact(n))
+
+
+# def fact(num):
+#     if num <= 1:
+#         return 1
+#     else:
+#         factorial = num * fact(num-1)
+#         return factorial
+    
+# n = int(input("Enter number: "))
+# print(fact(n))
+# def test(n):
+#     return test(n-1)
+
+# print(test(5))
+
+# def numbers(num):
+#     if num == 1:
+#         return 1
+#     else:
+#         numb = 1 + num
+
+# def print_numbers(n):
+#     if n == 0:
+#         return
+#     print(n)
+#     print_numbers(n - 1)
+
+# n = int(input("Enter a number: "))
+# print_numbers(n)
+
+
+# def print_nmbers_list(n):
+#     if n == 0:
+#         return
+#     print(n)
+#     print_nmbers_list(n-1)
+    
+
+# n = int(input("Enter number: "))
+# print_nmbers_list(n)
+
+
+# n = int(input("Enter number: "))
+
+# for i in range(n,0,-1):
+#     print(i)
+
+
+# def numbers(num):
+#     if num == 0:
+#         return
+#     else:
+#         print(num)
+#         numbers(num-1)
+
+# n = int(input("Enter number: "))
+# numbers(n)
+
+
+# # Sum of First N Natural Numbers
+# def sum(num):
+#     if num == 0:
+#         return 0
+#     else:
+#         return (num) + sum(num-1)
+        
+
+# N = int(input("Enter number: "))
+# Total = sum(N)
+# print(Total)
+
+# n = int(input("Enter a number: "))
+# total = 0
+
+# for i in range(1, n + 1):
+#     total += i
+
+# print(f"Sum of numbers from 1 to {n} is {total}")
+
+# n = int(input("Enter number: "))
+# Total = 0
+# for i in range(1,n+1):
+#     Total += i
+
+# n = int(input("Enter number: "))
+# n = abs(n)
+# count = 0
+# if n == 0:
+#     count = 1
+# else:
+#     while n > 0:
+#         count += 1
+#         n //= 10
+
+# print(f"Digits {count}")
+
+# A = input("Enter string: ")
+# A = A.sort(reversed)
+# print(A)
+
+
+# s = input("Enter a string: ")
+
+# rev = ""
+# for ch in s:
+#     rev = ch + rev
+
+# print("Reversed string =", rev)
+
+# String = input("Enter string: ")
+# Reversed_string = ""
+# for ch in String:
+#     Reversed_string = ch + Reversed_string
+
+# print(f"Reversed string {Reversed_string}")
