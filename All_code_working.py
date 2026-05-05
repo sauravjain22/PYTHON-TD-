@@ -2535,3 +2535,11 @@ _123abc@gmail.edu-com'''
 
 
 # calcualtion(20,"Tarun","Footplay","Swimming",Sub1 = 90,sub2 = 90)
+
+
+# def add(a,b):
+#     "This is function use to  return sum of two numbers"
+#     return a + b
+
+# print(add(4,5))
+# print(add.__doc__)
