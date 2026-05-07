@@ -10090,6 +10090,7 @@ NameError: name 'y' is not defined
 ✔ It dies after function execution
 
 🔥 Real Mind Map Structure
+
 Variables
 │
 ├── Global Variable
@@ -10664,7 +10665,6 @@ A global variable changes only when the function that modifies it is executed. S
 That sounds professional.
 
 
-.
 
 🔹 What Does “Function as an Argument” Mean?
 
@@ -10703,6 +10703,7 @@ call_function(greet)
         greet function reference passed
                ↓
         func() executes greet()
+
 
 🔥 Real Example – Calculator System
 def add(a, b):
@@ -10747,7 +10748,6 @@ add function as an argument
 
 
 
-.
 
 🔹 What is a Lambda Function?
 
@@ -10782,6 +10782,7 @@ Only one expression
 Automatically returns the result
 
 🟢 Basic Examples
+
 1️⃣ Square number
 square = lambda x: x * x
 print(square(4))
@@ -10801,7 +10802,9 @@ Output:
 Odd
 
 🏢 Real Corporate Usage
+
 🔹 1. Sorting (Very Common Interview Question)
+
 students = [
     {"name": "Saurabh", "marks": 85},
     {"name": "Rahul", "marks": 95},
@@ -10844,6 +10847,7 @@ Uses def	Uses lambda
 Can have multiple statements	Only one expression
 Has name	Anonymous
 More readable for large logic	Best for short logic
+
 🔥 When NOT to Use Lambda
 
 Bad example:
@@ -10891,6 +10895,12 @@ Functional programming
 🧠 Advanced Concept
 
 Lambda is often used with Higher-Order Functions.
+
+A higher-order function is a function that:
+
+takes another function as an argument
+OR
+returns another function
 
 Example:
 
@@ -11012,6 +11022,7 @@ iterable → list, tuple, etc.
 Returns → filter object (iterator)
 
 🟢 Basic Example
+
 numbers = [1, 2, 3, 4, 5, 6]
 
 even = list(filter(lambda x: x % 2 == 0, numbers))
@@ -11053,8 +11064,10 @@ print(type(filter(lambda x: x>2, [1,2,3])))
 Output:
 
 <class 'filter'>
+
 🔥 Real Corporate Example
 Example: Filtering Active Users
+
 users = [
     {"name": "Saurabh", "active": True},
     {"name": "Rahul", "active": False},
@@ -11063,6 +11076,25 @@ users = [
 
 active_users = list(filter(lambda user: user["active"], users))
 print(active_users)
+
+and for inactive users just use this
+
+users = [
+    {"name": "Saurabh", "active": True},
+    {"name": "Rahul", "active": False},
+    {"name": "Aman", "active": True}
+]
+
+inactive_users = list(
+    filter(lambda user: not user["active"], users)
+)
+
+print(inactive_users)
+
+Output
+[
+    {'name': 'Rahul', 'active': False}
+]
 
 Used in:
 
@@ -11247,8 +11279,6 @@ Answer:
 Both remove falsy values.
 But filter(None, iterable) is shorter and more Pythonic.
 
-
-.
 
 🔹 What is map()?
 
@@ -11538,6 +11568,7 @@ Take first element from each iterable
 Apply function
 Repeat
 Until one iterable is exhausted
+
 🎯 Interview-Ready Answer
 
 If interviewer asks:
@@ -11803,6 +11834,7 @@ import my_module as mm
 Use:
 
 mm.greet("Saurabh")
+
 ✅ 4. Import Everything (Not Recommended)
 from my_module import *
 

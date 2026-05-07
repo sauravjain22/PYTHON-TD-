@@ -2682,3 +2682,134 @@ _123abc@gmail.edu-com'''
 #     Reversed_string = ch + Reversed_string
 
 # print(f"Reversed string {Reversed_string}")
+
+
+# OGS = input("Enter string: ")
+# Rev = ""
+# for ch in OGS:
+#     Rev = ch + Rev
+
+# print(Rev)
+
+
+# x = 10
+# def functions():
+#     print(f"Inside function {x}")
+
+# functions()
+# print(f"Outside function {x}")
+
+# Name = input("Enter your name: ")
+# def greet():
+#     print(f"Hello {Name}")
+
+# Balance = int(input("Enter amount to balance:"))
+# def Amount_remaining():
+#     print(f"Your current balance is {Balance}")
+
+# def calling_functions(func):
+#     func()
+
+# calling_functions(greet)
+
+# def add(a,b):
+#     return a + b
+
+# def subtract(a,b):
+#     return a - b
+
+# def calculator(operation,x,y):
+#     return operation(x,y)
+
+
+# print(calculator(add,5,5))
+# print(calculator(subtract,10,5))
+
+
+# def add(number):
+#     return number + 1
+
+# def square(number):
+#     return number ** 2
+
+# Num = int(input("Enter number: "))
+# Result_1 = add(Num)
+# Result_2 = square(Result_1)
+
+# print(f"The sqaure of number {Num} + 1 is : {Result_2}")
+
+
+# def add(a,b):
+# #     return a + b
+
+# # print(add(5,10))
+
+# add = lambda a , b : a + b
+# # print(add(10,10))
+# x = int(input("Enter number: "))
+# Even_odd = lambda x: "Even" if x % 2 == 0 else "Odd"
+# print(Even_odd(x))
+
+
+
+# students = [
+#     {"name": "Saurabh", "marks": 85},
+#     {"name": "Rahul", "marks": 95},
+#     {"name": "Aman", "marks": 75}
+# ]
+
+# sorted_students = sorted(students, key=lambda x: x["name"])
+# print(sorted_students)
+
+# Students = [
+#     {"Name" : "Saurabh","Marks":85},
+#     {"Name" : "Tarun", "Marks":95},
+#     {"Name":"Rahul","Marks":99}
+# ]
+
+# sorted_students = sorted(Students,key=lambda x:(x["Name"],x["Marks"]))
+# print(sorted_students)
+
+# numbers = [1,2,3,4,5]
+# # sqared = list(map(lambda x:x*2,numbers))
+# # print(sqared)
+# Even = list(filter(lambda x: x % 2 == 0 ,numbers))
+# print(Even)
+
+# def calculate_function(function,value):
+#     return function(value)
+
+# Result = calculate_function(lambda x: x + 10,5)
+# print(Result)
+
+
+# print(list(map(lambda x: x**2, [1,2,3])))
+
+# Numbers = [1,2,3,4,5]
+# def even(x):
+#     return x % 2 == 0
+# # Even = list(filter(lambda x: x%2 != 0 , Numbers))
+# Even = list(filter(even, Numbers))
+# print(Even)
+
+# users = [
+#     {"name": "Saurabh", "active": True},
+#     {"name": "Rahul", "active": False},
+#     {"name": "Aman", "active": True}
+# ]
+
+# active_users = list(filter(lambda user: not user["active"],users))
+# print(active_users)
+
+# Prices = [100,200,300]
+# Total_with_GST = list(map(lambda price:price * 1.18,Prices))
+# print(Total_with_GST)
+
+# a = [1,2,3]
+# b = [10,20]
+# addition = list(map(lambda x,y:x+y,a,b))
+# print(addition)
+
+# import math_operations
+# print(math_operations.add(10,5))
+# print(math_operations.square(5))
