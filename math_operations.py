@@ -14,9 +14,11 @@
 # if __name__ == "__main__":
 #     greet()
 
-def add(a,b):
-    return a + b
+# def add(a,b):
+#     return a + b
 
-def square(a):
-    return a ** 2
+# def square(a):
+#     return a ** 2
 
+import All_code_working
+# All_code_working.greet()

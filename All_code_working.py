@@ -2813,3 +2813,71 @@ _123abc@gmail.edu-com'''
 # import math_operations
 # print(math_operations.add(10,5))
 # print(math_operations.square(5))
+
+# import cmath
+# print(cmath.sqrt(-4))
+
+# import sys
+# sys.path.append(r"C:\Users\ADMIN\Desktop\Lane Detection\road_lane_line_detection-master")
+# import lane_lines
+# print(lane_lines)
+
+# # print(__name__)
+# import All_code_working
+# # # print(__name__)
+
+# def greet():
+#     print("Saurav jain here its tested code ok")
+# # greet()
+# if __name__ ==" __main__":
+#     greet()
+\
+
+
+# import sys
+# print(sys)
+# print(sys.version)
+# try:
+#     file = open("math_operations.py","r")
+#     content = file.read()
+#     print(content)
+
+# try:
+# #     with open("Hbjsd.py","r") as file:
+# #         print(file.read())
+# # except FileNotFoundError as e:
+# #     print(e)
+
+
+# with open("Questions.py", "r") as file:
+#     lines = file.readlines()
+#     print(lines)
+
+# file = open("Assignment_1.py","r")
+# content = file.read()
+# print(content)\
+
+
+# try:
+#     with open("practise.txt","r") as file:
+#         content = file.readlines()
+#         print(content)
+
+# except FileNotFoundError as e:
+#     print(e)
+
+# with open("practise.txt") as file:
+#     for line in file:
+#         print(line.strip())
+
+import os
+filename = input("Enter filename: ")
+
+if os.path.exists(filename):
+    print(f"{filename} exits ")
+else:
+    print(f"{filename} does not exits so we created")
+    content = input(f"Enter content for: {filename}")
+    with open(filename,"w") as cf:
+        cf.write(content)
+

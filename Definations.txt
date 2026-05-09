@@ -12233,6 +12233,7 @@ print(cmath.sqrt(-4))
 Output:
 
 2j
+
 🎯 Interview Questions + Answers
 1️⃣ How do you calculate square root in Python?
 
@@ -12444,6 +12445,7 @@ Check:
 
 import sys
 print(sys.path)
+
 🎯 Interview-Level Answer
 
 If interviewer asks:
@@ -12617,6 +12619,90 @@ Meaning:
 
 🧠 Simple Memory Line
 __main__ = entry point
+
+Your Question:
+
+“If I can still call the function after importing, then what is the difference? Both ways seem same.”
+
+Answer:
+
+The difference is between:
+
+Automatic execution
+vs
+Manual function call
+WITHOUT if __name__ == "__main__":
+# All_code_working.py
+
+def greet():
+    print("Hello")
+
+greet()
+
+Another file:
+
+import All_code_working
+Output
+Hello
+
+Why?
+
+Because during import, Python executes the whole file, including:
+
+greet()
+
+So it runs automatically.
+
+WITH if __name__ == "__main__":
+# All_code_working.py
+
+def greet():
+    print("Hello")
+
+if __name__ == "__main__":
+    greet()
+
+Another file:
+
+import All_code_working
+Output
+Nothing
+
+Why?
+
+Because during import:
+
+__name__ = "All_code_working"
+
+NOT:
+
+"__main__"
+
+So:
+
+if __name__ == "__main__":
+
+becomes False.
+
+Therefore automatic execution is skipped.
+
+BUT THIS STILL WORKS
+import All_code_working
+
+All_code_working.greet()
+
+Output:
+
+Hello
+
+because now you are manually calling the function.
+
+FINAL UNDERSTANDING
+__main__ prevents automatic execution during import.
+
+It DOES NOT stop importing functions
+or manually calling them.
+    
 ✅ 2️⃣ What is import sys?
 
 sys is a built-in module.
@@ -12702,6 +12788,7 @@ __main__	File running directly
 sys	System-level module
 sys.path	Where Python searches modules
 sys.path.append()	Add new folder to search
+
 🚀 Small Real Example
 import sys
 
@@ -12797,6 +12884,7 @@ Situation	Will it print automatically?
 greet() written directly in module	YES
 greet() inside if __name__ == "__main__"	Only when run directly
 You manually call module.greet()	YES
+
 🎯 Very Important Concept
 
 __main__ only controls automatic execution during import.
@@ -13678,6 +13766,7 @@ To use its features:
 
 import sys
 🔥 3️⃣ Most Important Things Inside sys
+
 ✅ 1. sys.path (Very Important)
 import sys
 print(sys.path)
@@ -13745,6 +13834,7 @@ Checks memory size.
 
 import sys
 print(sys.getsizeof(100))
+
 ✅ 7. sys.maxsize
 
 Maximum integer size supported by system.
@@ -13766,6 +13856,7 @@ sys
 ├── exit → stop program
 ├── version → Python version
 └── modules → imported module cache
+
 🎯 Interview Questions + Answers
 1️⃣ What is sys module?
 
@@ -13972,13 +14063,13 @@ Saves memory
 
 Best for large files
 
-.
 
 🔹 1️⃣ Without with Statement (Traditional Way)
 file = open("data.txt", "r")
 content = file.read()
 print(content)
 file.close()
+
 ✅ What is happening here?
 
 open() → file open ho gayi
@@ -14057,6 +14148,7 @@ Error aaye toh file open reh sakti hai	Error me bhi close hoti hai
 Risky in production	Safe & recommended
 Code thoda messy	Clean & readable
 🎯 Interview Question Examples
+
 Q1: Why is with preferred over open()?
 
 👉 Because it automatically manages resources and prevents memory leaks.
@@ -14064,6 +14156,20 @@ Q1: Why is with preferred over open()?
 Q2: What protocol does with use?
 
 👉 Context Manager Protocol (__enter__, __exit__)
+with open("file.txt") as file:
+    data = file.read()
+
+Internally somehting happens like this
+
+file = open("file.txt")
+
+file.__enter__()
+
+try:
+    data = file.read()
+
+finally:
+    file.__exit__()
 
 Q3: Can we create our own context manager?
 
@@ -14249,7 +14355,7 @@ Example: How to handle different types of errors we put inside try and except bl
 
 try:
     num1 = int(input("Enter first number: "))
-    num2 = int(input("enter Second number: " ))
+    num2 = int(input("Enter Second number: " ))
     Result = num1/num2
     print(Result)
 except ZeroDivisionError:
