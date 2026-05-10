@@ -14431,9 +14431,6 @@ ValueError: Salary cannot be less than zero
 >So we can use built in error with our custom message or we can use raise Exception for general errors
 case with custom message
 
-
-
-
 Excellent topic. This is core software engineering knowledge, not just Python basics.
 
 If you understand error types and proper handling, your programs won’t crash in production systems.
@@ -14475,7 +14472,7 @@ print("Hello"
 
 Error:
 
-SyntaxError: unexpected EOF while parsing
+SyntaxError: unexpected EOF while parsing  
 
 Why?
 
@@ -14560,12 +14557,15 @@ except Exception:
 Better:
 
 except ValueError:
+
 3️⃣ Proper Ways to Handle Errors (Production Standard)
+
 Basic Structure
 try:
     risky_code()
 except SpecificError:
     handle_error()
+
 Multiple Exceptions
 try:
     process()
@@ -14621,6 +14621,7 @@ Better:
 
 if x != 0:
     print(10 / x)
+
 Strategy 2: Fail Gracefully
 
 Instead of crashing:
@@ -14629,6 +14630,7 @@ try:
     data = int(input())
 except ValueError:
     print("Please enter a valid integer.")
+    
 Strategy 3: Logging (Corporate Way)
 
 Never silently ignore errors.
@@ -14767,10 +14769,72 @@ def safe_divide(a, b):
     except TypeError:
         logging.error("Invalid data type")
         return None
-
 Program does not crash.
 Error is logged.
 Graceful output is returned.
+
+Example:
+
+
+import logging
+
+logging.basicConfig(
+    filename="app.log",
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+def safe_divide(a, b):
+
+    try:
+        return a / b
+
+    except ZeroDivisionError:
+        logging.error("Division by zero attempted")
+        return None
+    except TypeError:
+        logging.error("Invalid data type entered")
+
+
+print(safe_divide(5, "Hello")) 
+
+PART 1 → Setup Logging
+import logging
+
+logging.basicConfig(
+    filename="app.log",
+    level=logging.ERROR,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
+
+Meaning:
+
+👉 “Python, save all errors into app.log with time and message.”
+
+PART 2 → Risky Code
+try:
+    return a / b
+
+Meaning:
+
+👉 “Try doing division.”
+
+This is risky because errors can happen.
+
+PART 3 → Handle Errors
+except ZeroDivisionError:
+    logging.error("Division by zero attempted")
+
+Meaning:
+
+👉 “If denominator becomes 0, log the error.”
+
+except TypeError:
+    logging.error("Invalid data type entered")
+
+Meaning:
+
+👉 “If wrong datatype comes, log the error.”
 
 🔥 Final Engineering Summary
 
@@ -14841,6 +14905,7 @@ false	False
 null	None
 Only double quotes	Can use single or double
 Stored as text	Stored as object
+
 🔷 JSON Module in Python
 
 Python provides a built-in module:
@@ -14854,6 +14919,7 @@ No need to install anything.
 We use:
 
 json.dumps()
+
 Example:
 import json
 
@@ -14881,6 +14947,7 @@ After dumps(), data becomes a string.
 We use:
 
 json.loads()
+
 Example:
 import json
 
@@ -14956,9 +15023,8 @@ No need to change code.
 
 This is how big systems work.
 
-
-
 Example storing dictionary data in json format using with operation
+
 import json
 students = {'student1':{'roll':101,'name':'saurav','percentage':85},
 'student2': {'roll':102,'name':'Tarun','percentage':68}}
@@ -15169,6 +15235,7 @@ Output:
 
 {'name': 'Saurabh', 'age': 23}
 <class 'dict'>
+
 🟢 3️⃣ Level 2 – Using File (Most Common Use)
 Saving to File
 import pickle

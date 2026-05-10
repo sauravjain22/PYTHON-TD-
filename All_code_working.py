@@ -2870,14 +2870,309 @@ _123abc@gmail.edu-com'''
 #     for line in file:
 #         print(line.strip())
 
-import os
-filename = input("Enter filename: ")
+# import os
+# filename = input("Enter filename: ")
 
-if os.path.exists(filename):
-    print(f"{filename} exits ")
-else:
-    print(f"{filename} does not exits so we created")
-    content = input(f"Enter content for: {filename}")
-    with open(filename,"w") as cf:
-        cf.write(content)
+# if os.path.exists(filename):
+#     print(f"{filename} exits ")
+# else:
+#     print(f"{filename} does not exits so we created")
+#     content = input(f"Enter content for: {filename}")
+#     with open(filename,"w") as cf:
+#         cf.write(content)
+# try:
+#     num1 = int(input("Enter 1st number: "))
+#     num2 = int(input("Enter 2nd number: "))
+#     Result = num1/num2
+#     print(Result)
 
+# except ZeroDivisionError as ZE:
+#     print(f"{ZE} {num2} ie denominator cannot be zero")
+
+# except ValueError as VE:
+#     print(f"{VE} input can only be numbers ")
+
+
+# try:
+#     filename = input("Enter filename: ")
+#     with open(filename,"r") as file:
+#         print(file.read())
+
+# except FileNotFoundError as FNF:
+#     print(f"{FNF} does not exits pls enter valid filename")
+
+
+# import io
+# try:
+#     filename = input("Enter filename: ")
+#     with open(filename,"r") as f:
+#         content = f.read()
+# except FileNotFoundError as FNF:
+#     print("pls enter valid file name")
+#     print(FNF)
+# except SyntaxError as SE:
+#     print(SE)
+# except io.UnsupportedOperation as UO:
+#     print(UO)
+# else:
+#     print(content)
+# finally:
+#     print("this code will always executed")
+
+# salary = float(input("Enter your salary: "))
+# if salary < 0:
+#     raise ValueError ("Salary cannot be negative")
+# else:
+#     print({salary})
+
+# try:
+#     with open("password.txt","r") as file:
+#         content = file.read()
+
+# except FileNotFoundError as FNF:
+#     print(FNF)
+
+# finally:
+#     print("This will execute automatically")
+
+# if x != 0:
+#     print(10/x)
+
+
+# if x!=0:
+#     print
+# x = int(input("Enter number: "))
+# if x != 0:
+#     print(10 / x)
+# import logging
+# try:
+#     data = int(input("Enter integer: "))
+#     print(data)
+# except Exception as e:
+#     logging.error(f"Error occurred: {e}")
+
+# import logging
+
+# logging.basicConfig(
+#     filename="app.log",
+#     level=logging.ERROR
+# )
+
+# try:
+#     x = 10 / 0
+
+# except Exception as e:
+#     logging.error(f"Error occurred: {e}")
+
+
+# import logging
+
+# logging.basicConfig(
+#     filename="app.log",
+#     level=logging.ERROR
+# )
+
+# try:
+#     x = 10 / 0
+
+# except Exception as e:
+#     logging.error(f"First Error: {e}")
+
+# try:
+#     num = int("hello")
+
+# except Exception as e:
+#     logging.error(f"Second Error: {e}")
+
+# import json
+# data = {
+#     "Name":"Saurabh",
+#     "Age":22,
+#     "Is_student":True
+# }
+
+# json_data = json.dumps(data)
+# print(json_data)
+# print(type(json_data))
+# json_data = '{"name": "Saurabh", "age": 23}'
+
+# python_data = json.loads(json_data)
+# print(python_data)
+# print(type(python_data))
+
+
+import json
+# data = {
+#     "car_model": "Tesla",
+#     "speed_limit": 120,
+#     "autopilot": True
+# }
+
+# with open("Config.json","w") as file:
+#     json.dump(data,file)
+#     print(type(data))
+
+# with open("config.json","r") as file:
+#     data = json.load(file)
+#     print(data)
+#     print(type(data))
+
+# import logging
+
+# logging.basicConfig(
+#     filename="app.log",
+#     level=logging.ERROR,
+#     format="%(asctime)s - %(levelname)s - %(message)s"
+# )
+
+# def safe_divide(a, b):
+
+#     try:
+#         return a / b
+
+#     except ZeroDivisionError:
+#         logging.error("Division by zero attempted")
+#         return None
+#     except TypeError:
+#         logging.error("Invalid data type entered")
+
+
+# print(safe_divide(5, "Hello"))
+
+
+
+# import logging
+
+# logging.basicConfig(
+#     filename="Practise.log",
+#     level=logging.ERROR,
+#     format ="%(asctime)s - %(levelname)s - %(message)s"
+# )
+
+# def safe_divide(a,b):
+#     try:
+#         print( a / b)
+#     except ZeroDivisionError:
+#         logging.error("Cannot divideby zero")
+#         return None
+#     except TypeError:
+#         logging.error("Invalid data type")
+#         return None
+
+
+# # print(safe_divide(5,"Hello"))
+
+# import json
+# data = {
+#     "Student":"Saurabh",
+#     "Age":22,
+#     "Course":"Msc-IT"
+# }
+
+# json_data = json.dumps(data)
+# print(json_data)
+# print(type(json_data))
+
+
+# import json
+
+# json_data = '{"Saurabh":"Student","Age":22,"Course":"Mscit"}'
+
+# pd = json.loads(json_data)
+# print(pd)
+# print(type(pd))
+
+# import json
+# data = {
+#     "Name":"Saurabh",
+#     "Age":22,
+#     "Hobby":"Singing"
+# }
+
+# with open("Config.json","w") as file:
+#     json.dump(data,file)
+
+
+# import json
+# with open("config.json","r") as file:
+#     data = json.load(file)
+
+# print(data)
+# print(type(data))
+
+# import json
+
+# with open("config2.json","r") as file:
+#     config = json.load(file)
+
+# max_speed =  config["max_speed"]
+# min_speed = config["min_speed"]
+
+# print(f"{max_speed} is your cars max speed")
+# print(f"{min_speed} is your cars min speed")
+
+# import json
+
+# students_data = {
+#     "Student1": {"Name":"Saurabh","Age":22,"Location":"Mumbai"},
+#     "Student2":{"Name":"Rahul","Age":22,"Location":"Hydrebad"}
+# }
+
+# with open("Students.json","w") as file:
+#     json.dump(students_data,file,indent=4)
+
+
+# import json
+
+# students = {
+#     'student1': {
+#         'roll':100,
+#         'name':'saurav',
+#         'percentage':85
+#     },
+
+#     'student2': {
+#         'roll':102,
+#         'name':'hemu',
+#         'percentage':68
+#     }
+# }
+
+# with open("students_data.json","r") as file:
+#     data = json.load(file)
+
+# data.update(students)
+
+# with open("Students.json","w") as fh:
+#     json.dump(data, fh, indent=4)
+
+
+# import pickle
+# data = {"Comapny":"ITC","Turn_over":24,"Established":1984}
+
+# pickled_data = pickle.dumps(data)
+# print(pickled_data)
+
+# original = pickle.loads(pickled_data)
+# print(original)
+# print(type(original))
+
+# import pickle
+
+# # data = {"Project":"Self-driving car simulator","Contributor":"Saurabh jain"}
+
+# # with open("pickle.pkl","wb") as file:
+# #     pickle.dump(data,file)
+
+# with open("pickle.pkl","rb") as pd:
+#     data = pickle.load(pd)
+#     print(data)
+# import pickle
+# data = {
+#     "numbers": [1, 2, 3],
+#     "set_data": {10, 20, 30},
+#     "tuple_data": (5, 6, 7)
+# }
+
+# pickle_data = pickle.dumps(data)
+# print(pickle.loads(pickle_data))

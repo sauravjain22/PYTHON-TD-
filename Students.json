@@ -1,0 +1,23 @@
+{
+    "Student1": {
+        "Name": "Saurabh",
+        "Age": 22,
+        "Location": "Mumbai"
+    },
+    "Student2": {
+        "Name": "Rahul",
+        "Age": 22,
+        "Location": "Hydrebad"
+    }
+}{
+    "student1": {
+        "roll": 100,
+        "name": "saurav",
+        "percentage": 85
+    },
+    "student2": {
+        "roll": 102,
+        "name": "hemu",
+        "percentage": 68
+    }
+}
