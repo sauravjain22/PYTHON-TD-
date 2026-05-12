@@ -3176,3 +3176,286 @@ import json
 
 # pickle_data = pickle.dumps(data)
 # print(pickle.loads(pickle_data))
+
+# import pickle
+# data = {
+#     "numbers": [1, 2, 3],
+#     "set_data": {10, 20, 30},
+#     "tuple_data": (5, 6, 7)
+# }
+
+# pickled_data = pickle.dumps(data)
+# print(pickled_data)
+# python_data = pickle.loads(pickled_data)
+# print(python_data)
+
+# import re
+
+# pattern = r"abc"
+
+# text = "abc is here dear"
+
+# result = re.search(pattern,text)
+# # print(result)
+
+# # import re
+# message = "We are using python version 3.13"
+# version = re.search("[0-9][0-9]",message)
+# print(version)
+# # match_object = re.search("python",message)
+# # print(match_object)
+
+# import re
+# message = "The current version of python is 3.13"
+# match_object = re.search("[0-9][.][0-9][0-9]",message)
+# print(match_object)
+
+# import re
+# Text = "Python is very easy programming language"
+# pattern = r"[a-z][a-z]"
+# result = re.search(pattern,Text)
+# print(result)
+
+# import re
+# Text = "Python is very easy language to learn and execute"
+# Pattern = input("Enter pattern: ")
+# Result = re.search(Pattern,Text)
+# print(f"Result is {Result}")
+
+import re
+# pattern = r"[a-z][a-z][a-z]\s"
+# text = "Python is very intresting langauage and i m learning its python3.1 version"
+# result = re.search(pattern,text)
+# print(result)
+# pattern = r"C.r"
+# data = "This guagrage has 3 Car 4 Ctr and 5 Cmr"
+# Result = re.findall(pattern,data)
+# print(Result)
+
+# pattern = r"User." 
+# data = "User1,User2,saurabh,Tarun,User3"
+# Users = re.findall(pattern,data)
+# print(Users)
+
+# import re
+
+# text = "a ab abb abbb"
+
+# print(re.findall("ab*", text))
+
+
+# import re
+# text = "The current speed is 120 kmph and min speed is 20 kmph"
+# pattern = "\d+"
+# Speed = re.findall(pattern,text)
+# print(Speed)
+
+
+# import re
+
+# text = "apple banana cherry"
+
+# print(re.findall("[abc]", text))
+
+
+# print(re.findall("[0-9]", "abc123"))
+
+# print(re.findall(r"\w", "user_1"))
+
+# print(re.search(r"\s", "hello world"))
+
+# print(re.search(r"^Hello", "This is saurabh Hello world"))
+
+
+# ^["\w.-"]+@["\w\.-"]+"\."["\w"]+$
+
+# r"^[\w.-]+@[\w.-]+\.\w+$"
+
+# # ^[\w\.-]+@[\w\.-]+\.\w+$
+
+# import re
+# Email = input("Enter full email address to check: ")
+# pattern_for_email_Validation =  r"^[\w.-]+@[\w.-]+\.\w+$"
+# if re.match(pattern_for_email_Validation,Email):
+#     print(f"{Email} is an Valid email address , you can proceed")
+# else:
+#     print(f"{Email} is an invalid email adress , pls try again after changing errors")
+
+# import re
+
+# email = input("Enter full email address: ")
+
+# # Check 1: Must contain exactly one @
+# if email.count("@") != 1:
+#     print("Error: Email must contain exactly one @ symbol")
+
+# else:
+#     username, domain = email.split("@")
+
+#     # Check 2: Username part cannot be empty
+#     if username == "":
+#         print("Error: Username part is missing before @")
+
+#     # Check 3: Domain part cannot be empty
+#     elif domain == "":
+#         print("Error: Domain part is missing after @")
+
+#     # Check 4: Domain must contain dot
+#     elif "." not in domain:
+#         print("Error: Domain must contain a dot (example: .com)")
+
+#     # Check 5: Dot cannot be at start or end
+#     elif domain.startswith(".") or domain.endswith("."):
+#         print("Error: Dot cannot be at start or end of domain")
+
+#     # Check 6: Full regex validation
+#     elif not re.match(r"^[\w.-]+@[\w.-]+\.\w+$", email):
+#         print("Error: Email contains invalid characters")
+
+#     else:
+#         print("Valid email address, you can proceed")
+
+# import re
+
+# while True:
+
+#     email = input("Enter full email address: ")
+
+#     # Check 1
+#     if email.count("@") != 1:
+#         print("Error: Email must contain exactly one @ symbol")
+#         continue
+
+#     username, domain = email.split("@")
+
+#     # Check 2
+#     if username == "":
+#         print("Error: Username part is missing before @")
+#         continue
+
+#     # Check 3
+#     if domain == "":
+#         print("Error: Domain part is missing after @")
+#         continue
+
+#     # Check 4
+#     if "." not in domain:
+#         print("Error: Domain must contain .com or something similar")
+#         continue
+
+#     # Check 5
+#     if domain.startswith(".") or domain.endswith("."):
+#         print("Error: Dot cannot be at start or end")
+#         continue
+
+#     # Final regex validation
+#     pattern = r"^[\w.-]+@[\w.-]+\.\w+$"
+
+#     if not re.match(pattern, email):
+#         print("Error: Email contains invalid characters")
+#         continue
+
+#     print("Valid email address, you can proceed")
+#     break
+
+
+# import re
+# text = "Python has many users but most premium users are user1 and user2 and other users1 otp is 120 1234"
+# # pattern = r"[a-z]{4,}[0-9]"
+# pattern = r"\d{3,}"
+# result = re.findall(pattern,text)
+# print(result)
+
+
+# import re
+
+# log = """
+# Speed: 120 km/h
+# Speed: 95 km/h
+# Speed: 135 km/h
+# """
+
+# speeds = re.findall(r"\d+", log)
+
+# print(speeds)
+
+# import re
+# pattern = r"^[a-z]{6}"
+# text = "python is a programming langauage"
+# result = re.search(pattern,text)
+# print(result)
+
+# import re
+# data = "python is a programming language and saurav-9403338964,Tarun-8275461815,Mummy-9892505651"
+# pattern = r"[\w]+[-][\d]{10}"
+# Person_with_MN = re.finditer(pattern,data)
+# for i in Person_with_MN:
+#     print(i)
+
+
+# import re
+
+# text = "Speed 120 and 95"
+
+# matches = re.search(r"\d+", text)
+# print(matches)
+
+# import re
+# text = "my password is 8989"
+# pattern = r"\d"
+# protected_password = re.sub(pattern,"*",text)
+# print(protected_password)
+
+# import re
+# Text = "Monday","Tuesday","Wednesday","Thursday","Monday","Saturday","Sunday"
+# Replacmt = "Friday"
+# pattern = "Monday"
+
+# Result = re.sub(Replacmt,pattern,Text)
+# print(Result)
+
+
+# import re
+# s1 = "Sunday ,Monday, Tuesday ,Monday, Sunday"
+# pat = "Sunday"
+# replacement = "Friday"
+# result = re.sub(pat,replacement,s1)
+# print(result)
+
+# import re
+# text = "My caR is working fine"
+# Result = re.search("car",text,re.IGNORECASE)
+# print(Result)
+
+# import re
+# pattern = re.compile("car",re.IGNORECASE)
+# text = "Car is much faster than bikes , but car is more expensive too then bike"
+# Result = pattern.findall(text)
+# print(Result)
+
+# import re
+# pattern = "\d+"
+# compiled_pattern = re.compile(pattern)
+# text = "Users of python with phone number are saurav-9403338964, Tarun-8275461815,Mummy-9892505651"
+# Phone_numbers = re.findall(compiled_pattern,text)
+# print(Phone_numbers)
+
+import re
+
+try:
+    Filename = input("Enter filename: ")
+    with open(Filename,"r") as file:
+        data = file.read()
+
+        pattern = r"\b[A-Za-z][\w.-]*@[A-Za-z]+\.[A-Za-z]{2,}\b"
+
+        matches = re.finditer(pattern,data)
+
+        print("Valid email found")
+
+        for match in matches:
+            print(match.group(),match.start(),match.end())
+
+except FileNotFoundError:
+    print(f"No file named {Filename}")
+

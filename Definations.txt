@@ -15351,6 +15351,32 @@ print(result)
 If found → Match object
 If not → None
 
+r means raw string in Python.
+
+So this:
+
+pattern = r"abc"
+
+is a raw string.
+
+It tells Python:
+
+“Treat backslashes (\) as normal characters, not special escape characters.”
+
+Normal string:
+
+"\n"
+
+Python understands \n as a new line.
+
+But raw string:
+
+r"\n"
+
+Python treats it as literally:
+
+\ and n
+
 example:using re.search particular pattern here it is python in message
 
 import re
@@ -15416,12 +15442,22 @@ result = re.search(pattern,Text)
 print(result)
 
 
-example: using \D in pattern so it basically matches 1 non digit character which is similar to [0-9]
+example: using \D in pattern so it basically matches 1 non digit character which is similar to [a-z] or [A-Z] 
 import re
 pattern = r"[a-z][a-z][a-z]\D"
 text = "Python is very intresting langauage and i m learning its python3.1 version"
 result = re.search(pattern,text)
+print(result)\
+
+example : This will return Pyth
+
+
+import re
+pattern = r"\D\D\D\D"
+text = "PythOn is very intresting langauage and i m learning its python3.1 version"
+result = re.search(pattern,text)
 print(result)
+
 
 example using \s to find white space character from text
 
@@ -15530,6 +15566,7 @@ import re
 text = "a ab abb abbb"
 
 print(re.findall("ab*", text))
+
 +
 
 Means 1 or more occurrences
@@ -15547,6 +15584,7 @@ abbb
 Example
 
 print(re.findall("ab+", text))
+
 Real Use Case
 
 Extract numbers.
@@ -15633,6 +15671,7 @@ re.findall(r"\d", "a1b2c3")
 Output
 
 ['1','2','3']
+
 \w
 
 Word characters
@@ -15642,6 +15681,7 @@ a-z A-Z 0-9 _
 Example
 
 re.findall(r"\w", "user_1")
+
 \s
 
 Whitespace
@@ -15653,6 +15693,7 @@ newline
 Example
 
 re.findall(r"\s", "hello world")
+
 Level 6 — Start and End Anchors
 ^
 
@@ -15673,6 +15714,7 @@ Say Hello
 Example
 
 re.search(r"^Hello", "Hello world")
+
 $
 
 End of string
@@ -15685,6 +15727,7 @@ Matches
 
 Hello world
 Now the Important Part
+
 Deep Explanation — Email Validation Regex
 
 Pattern:
@@ -15744,6 +15787,7 @@ Every email must contain @
 Example
 
 john@gmail.com
+
 Step 4
 [\w\.-]+
 
@@ -15757,6 +15801,7 @@ gmail
 yahoo
 outlook
 company-name
+
 Step 5
 \.
 
@@ -15785,6 +15830,7 @@ com
 org
 net
 edu
+
 Step 7
 $
 
@@ -15846,6 +15892,52 @@ Java Spring
 All use regex validation.
 
 Interview Question (Important)
+
+example of email validation 
+
+
+import re
+
+while True:
+
+    email = input("Enter full email address: ")
+
+    # Check 1
+    if email.count("@") != 1:
+        print("Error: Email must contain exactly one @ symbol")
+        continue
+
+    username, domain = email.split("@")
+
+    # Check 2
+    if username == "":
+        print("Error: Username part is missing before @")
+        continue
+
+    # Check 3
+    if domain == "":
+        print("Error: Domain part is missing after @")
+        continue
+
+    # Check 4
+    if "." not in domain:
+        print("Error: Domain must contain .com or something similar")
+        continue
+
+    # Check 5
+    if domain.startswith(".") or domain.endswith("."):
+        print("Error: Dot cannot be at start or end")
+        continue
+
+    # Final regex validation
+    pattern = r"^[\w.-]+@[\w.-]+\.\w+$"
+
+    if not re.match(pattern, email):
+        print("Error: Email contains invalid characters")
+        continue
+
+    print("Valid email address, you can proceed")
+    break
 
 Q: Why do we use r"" in regex?
 
@@ -16254,7 +16346,7 @@ example of ^ symbol use to match at start of the string
 
 
 import re
-pattern = r"^[a-z]{8}"
+pattern = r"^[a-z]{7}"
 text = "python is a programming langauage"
 result = re.search(pattern,text)
 print(result)
@@ -16291,7 +16383,7 @@ print(result)
 output:
 ['Saurav-9403338964', 'Tarun-8275461815', 'Mummy-9892505651']
 
-and this measn r"[0-9]{7,} 7 or more digits but Minimum is 7
+and this means r"[0-9]{7,} 7 or more digits but Minimum is 7
 
 
 1️⃣ What is finditer()?
@@ -16573,6 +16665,7 @@ try:
 
 except FileNotFoundError:
     print("Error: Student_details.txt file not found.")
+    
 1️⃣ Reading the File
 
 Your code:

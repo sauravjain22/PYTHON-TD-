@@ -1,6 +1,7 @@
 Alice alice-cool_123@gmail.com 9403338964
 Carol Carol_123@example.com 9892505651
 John John.den.123@devdomain.edu 8275461815
+
 Invalid email:
 _123abc@example.com
 _123abc@gmail.edu-com
