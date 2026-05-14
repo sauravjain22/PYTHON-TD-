@@ -3440,22 +3440,83 @@ import re
 # Phone_numbers = re.findall(compiled_pattern,text)
 # print(Phone_numbers)
 
-import re
+# import re
 
-try:
-    Filename = input("Enter filename: ")
-    with open(Filename,"r") as file:
-        data = file.read()
+# try:
+#     Filename = input("Enter filename: ")
+#     with open(Filename,"r") as file:
+#         data = file.read()
 
-        pattern = r"\b[A-Za-z][\w.-]*@[A-Za-z]+\.[A-Za-z]{2,}\b"
+#         pattern = r"\b[A-Za-z][\w.-]*@[A-Za-z]+\.[A-Za-z]{2,}\b"
 
-        matches = re.finditer(pattern,data)
+#         matches = re.finditer(pattern,data)
 
-        print("Valid email found")
+#         print("Valid email found")
 
-        for match in matches:
-            print(match.group(),match.start(),match.end())
+#         for match in matches:
+#             print(match.group(),match.start(),match.end())
 
-except FileNotFoundError:
-    print(f"No file named {Filename}")
+# except FileNotFoundError:
+#     print(f"No file named {Filename}")
+
+
+
+# '''Task 1: Perform Basic Mathematical Operations
+# Problem Statement: Write a Python program that does the following:
+# 1.  Takes two numbers as input from the user.
+# 2.  Performs the basic mathematical operations on these two numbers:
+# o	Addition
+# o	Subtraction
+# o	Multiplication
+# o	Division
+# 3.  Displays the results of each operation on the screen.
+
+# Number_1 = int(input("Enter First number: "))
+# Number_2 = int(input("Enter Second Number: "))
+
+# Addition = Number_1 + Number_2
+# Subtraction = Number_1 - Number_2
+# Multiplication = Number_1*Number_2
+# Division = Number_1/Number_2
+
+# print(Addition,Subtraction,Multiplication,Division)
+
+# First_name = input("Enter your first name :")
+# Last_name = input("Enter your last name : ")
+# Full_name = First_name +" " + Last_name
+
+# print(f"Hello {Full_name} Welcome to python programm")
+
+ 
+# '''Problem Statement: Write a Python program that:
+# 1.   Takes user input and writes it to a file named output.txt.
+# 2.   Appends additional data to the same file.
+# 3.   Reads and displays the final content of the file.
+
+
+# filename= input("Enter your file name:")
+
+# with open("Output.txt","w") as op:
+#     content = input("Enter content to add : ")
+#     op.write(content)
+#     print(f"Content added successfully")
+
+# with open("Output.txt","a") as op:
+#     additional_content = input("Enter additional content : ")
+#     op.write(additional_content)
+#     print("Additional content added")
+
+# with open("Output.txt","r") as op:
+#     Data = op.read()
+#     print(Data)
+
+
+principal = float(input("Enter principal amount: "))
+Rate = float(input("Enter rate amount: "))
+Time = float(input("Enter Time in years: "))
+
+Simple_Intrest = (principal*Rate*Time)/100
+
+
+print("Simple intrest is: ", Simple_Intrest)
 

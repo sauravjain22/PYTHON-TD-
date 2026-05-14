@@ -1,2 +1,2 @@
-Hello python
-Learning file handling in python
+Hello this is my new beginning in python world
+This is extra content added to modify further this was modifed on 14 may 2026

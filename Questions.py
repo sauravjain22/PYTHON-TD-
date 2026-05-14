@@ -1,4 +1,4 @@
-#How to calculate area of traingle
+# How to calculate area of traingle
 # import math
 
 # a = int(input("Enter 1st side:")) 
