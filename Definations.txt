@@ -16824,8 +16824,1494 @@ John.den.123@devdomain.edu
 Invalid emails are ignored.
 
 >Object oriented programming:
+WHAT IS OOP REALLY?
+
+OOP = Object-Oriented Programming
+
+It is a way of designing software using:
+
+objects
+real-world entities
+behaviors
+relationships
+
+Instead of writing everything as random functions and variables, we organize code like real systems.
+
+Why Big Companies Use OOP
+
+Imagine you work at Uber.
+
+Their system has:
+
+Drivers
+Riders
+Trips
+Payments
+Maps
+Vehicles
+
+If engineers write everything in random code:
+
+project becomes impossible to manage
+bugs increase massively
+scaling becomes nightmare
+
+So they organize everything into objects.
+
+REAL WORLD ANALOGY
+
+Think about a dog.
+
+A dog has:
+
+name
+age
+breed
+
+And dog can:
+
+bark
+run
+eat
+
+In OOP:
+
+Real World	OOP
+Dog	Object
+name, age	Attributes
+bark(), run()	Methods
+TWO MOST IMPORTANT THINGS IN OOP
+
+Everything starts from:
+
+Class
+Object
+1. CLASS
+
+A class is a blueprint/template/design.
+
+Example:
+Blueprint of a building.
+
+Blueprint is NOT actual building.
+
+It only defines:
+
+structure
+rules
+properties
+
+Same in Python.
+
+First Class Example
+class Car:
+    pass
+
+This creates a class named Car.
+
+VERY IMPORTANT
+class Car:
+
+This does NOT create a car.
+
+It only creates a design/template.
+
+2. OBJECT
+
+Object is the real thing created from class.
+
+Example:
+
+Class = Car blueprint
+Object = Actual BMW
+Creating Object
+class Car:
+    pass
+
+car1 = Car()
+
+Now:
+
+Car = class
+car1 = object
+INTERNAL MEMORY UNDERSTANDING
+
+This is where most beginners stop learning.
+But interviews start from here.
+
+When Python sees:
+
+car1 = Car()
+
+Python:
+
+Allocates memory in RAM
+Creates object
+Returns object reference
+Stores reference in car1
+
+So:
+
+car1
+
+does NOT store actual object.
+
+It stores:
+
+reference/address pointing to object in memory
+
+This is extremely important for:
+
+debugging
+performance
+mutable objects
+deep copy vs shallow copy
+multithreading
+LET'S SEE IT
+class Car:
+    pass
+
+car1 = Car()
+
+print(car1)
+
+Output may look like:
+
+<__main__.Car object at 0x000001F4A2B3>
+
+That strange thing is memory reference.
+
+REAL CORPORATE EXAMPLE
+
+Suppose Amazon has:
+
+class Customer:
+
+Millions of customers can be created from ONE class.
+
+Each object has different data:
+
+name
+order history
+payment details
+
+But same structure.
+
+This is scalability.
+
+FIRST IMPORTANT INDUSTRY CONCEPT
+Class = structure
+Object = actual data instance
+
+Interviewers LOVE asking this.
+
+NOW LET'S ADD DATA
+
+Currently our car has nothing.
+
+Real cars have:
+
+brand
+color
+speed
+
+So now we add attributes.
+
+__init__() METHOD
+
+This is one of the MOST IMPORTANT methods in Python OOP.
+
+class Car:
+
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+WHAT IS __init__ ?
+
+It is called automatically when object is created.
+
+Example:
+
+car1 = Car("BMW", "Black")
+
+Python automatically calls:
+
+__init__()
+INTERNAL FLOW
+
+When this runs:
+
+car1 = Car("BMW", "Black")
+
+Python internally does:
+
+Create empty object
+Pass object to self
+Execute __init__
+Store values
+MOST IMPORTANT BEGINNER CONFUSION
+What is self ?
+
+self means:
+
+current object itself
+
+VERY IMPORTANT.
+
+VISUALIZE THIS
+car1 = Car("BMW", "Black")
+
+Internally:
+
+Car.__init__(car1, "BMW", "Black")
+
+So:
+
+self = car1
+FULL EXAMPLE
+class Car:
+
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+car1 = Car("BMW", "Black")
+
+print(car1.brand)
+print(car1.color)
+
+Output:
+
+BMW
+Black
+REAL INDUSTRY ANALOGY
+
+In a fintech company:
+
+class BankAccount:
+
+Attributes may be:
+
+account_number
+balance
+customer_name
+IFSC code
+
+Every user object stores unique data.
+
+VERY IMPORTANT INTERVIEW QUESTION
+
+Difference between:
+
+class variable
+instance variable
+
+We’ll do this next because companies ask this A LOT.
+
+Your Task
+
+Carefully analyze this code:
+
+class Employee:
+
+    def __init__(self, name, salary):
+        self.name = name
+        self.salary = salary
+
+emp1 = Employee("Saurabh", 50000)
+
+Tell me:
+
+Which thing is class?
+Which thing is object?
+What is stored inside self.name ?
+What does self refer to here?
+What happens internally when object is created?
+
+What happens internally when:
+
+emp1 = Employee("Saurabh", 50000)
+
+runs?
+
+Try giving detailed answers. Even partial understanding is fine right now.
+
+employee is class here
+
+Correct.
+
+class Employee:
+
+Employee is the class.
+
+Why?
+
+Because it defines:
+
+structure
+attributes
+future behavior of employee objects
+
+It is the blueprint/template.
+
+Partially correct — but this is where interview precision matters.
+
+Accurate Answer
+emp1 = Employee("Saurabh", 50000)
+emp1 is a reference variable
+
+Actual object is:
+
+Employee("Saurabh", 50000)
+
+Very important distinction.
+
+Deep Internal Understanding
+
+When this runs:
+
+emp1 = Employee("Saurabh", 50000)
+
+Python does:
+
+Create object in memory
+Initialize object
+Return reference/address
+Store reference inside emp1
+
+So:
+
+Thing	Meaning
+Employee	Class
+Employee("Saurabh", 50000)	Object creation
+emp1	Reference variable pointing to object
+Real Interview Detail
+
+Most beginners say:
+
+“emp1 is object.”
+
+But stronger answer is:
+
+“emp1 stores reference to Employee object.”
+
+That sounds much more professional in interviews.
+
+Correct.
+
+self.name = name
+
+Here:
+
+name
+
+contains:
+
+"Saurabh"
+
+So object stores:
+
+self.name = "Saurabh"
+Important Deep Understanding
+
+self.name becomes:
+
+an instance variable
+
+Meaning:
+
+every object gets its own copy
+
+Example:
+
+emp1 = Employee("Saurabh", 50000)
+emp2 = Employee("Rahul", 70000)
+
+Internally:
+
+emp1.name → "Saurabh"
+emp2.name → "Rahul"
+
+Each object stores separate data.
+
+This is one of the MAIN reasons OOP scales well.
+
+Real Corporate Example
+
+Suppose LinkedIn has:
+
+class User:
+
+Millions of users are created.
+
+Each object stores:
+
+unique name
+unique email
+unique profile
+
+But all follow same class structure.
+
+That’s scalable architecture.
+
+Correct.
+
+In this case:
+
+self
+
+refers to:
+
+emp1
+
+the current object being created.
+
+VERY IMPORTANT INTERNAL UNDERSTANDING
+
+When this runs:
+
+emp1 = Employee("Saurabh", 50000)
+
+Python internally does something conceptually similar to:
+
+Employee.__init__(emp1, "Saurabh", 50000)
+
+So:
+
+Parameter	Value
+self	emp1
+name	"Saurabh"
+salary	50000
+THIS LINE
+self.name = name
+
+actually becomes:
+
+emp1.name = "Saurabh"
+
+And:
+
+self.salary = salary
+
+becomes:
+
+emp1.salary = 50000
+HUGE INDUSTRY IMPORTANCE
+
+Understanding self is critical for:
+
+frameworks like Django Software Foundation Django
+FastAPI
+ML model classes
+dependency injection systems
+backend architectures
+
+Many weak Python developers memorize syntax but never understand:
+
+self is just the current object reference.
+
+Strong engineers understand the memory model behind it.
+
+One VERY Important Python Fact
+
+self is NOT a keyword.
+
+Unlike:
+
+if
+for
+while
+class
+
+You could technically write:
+
+class Test:
+
+    def __init__(myobject):
+        print(myobject)
+
+But industry standard is ALWAYS:
+
+self
+
+Now final and most important question:
+
+What happens internally when object is created?
+
+When this runs:
+
+emp1 = Employee("Saurabh", 50000)
+
+Explain step-by-step what Python does internally.
+
+Employee__init__(emp1,"Saurabh","50000")
+
+Excellent. You are starting to understand the internal mechanism instead of just syntax.
+
+Your answer is partially correct because you identified the automatic __init__ call.
+
+Now let’s make it fully accurate like a strong interview answer.
+
+When This Runs
+emp1 = Employee("Saurabh", 50000)
+
+Python internally performs multiple steps.
+
+STEP 1 — Memory Allocation
+
+Python first:
+
+allocates memory in RAM
+creates empty Employee object
+
+This happens through:
+
+__new__()
+
+Most beginners never learn this.
+
+Actual object creation happens in:
+
+__new__()
+
+NOT __init__().
+
+This is advanced but very important.
+
+STEP 2 — Object Reference Created
+
+Python creates object reference.
+
+Conceptually:
+
+emp1 ---> Employee object in memory
+STEP 3 — __init__() Automatically Runs
+
+Now Python initializes object:
+
+Conceptually:
+
+Employee.__init__(emp1, "Saurabh", 50000)
+
+Correct understanding:
+
+self = emp1
+name = "Saurabh"
+salary = 50000
+STEP 4 — Instance Variables Stored
+
+These lines run:
+
+self.name = name
+self.salary = salary
+
+Meaning:
+
+emp1.name = "Saurabh"
+emp1.salary = 50000
+
+Now object contains data.
+
+STEP 5 — Reference Stored in Variable
+
+Finally:
+
+emp1
+
+stores reference/address of object.
+
+Remember:
+
+variable does NOT store actual object
+it stores reference to object
+
+This becomes VERY important later in:
+
+mutable objects
+garbage collection
+memory optimization
+deep copy/shallow copy
+multiprocessing
+VERY IMPORTANT ADVANCED CONCEPT
+__new__() vs __init__()
+Method	Responsibility
+__new__()	Creates object
+__init__()	Initializes object
+
+This is a very strong Python interview concept.
+
+REAL CORPORATE EXAMPLE
+
+In large ML systems at companies like OpenAI or Google:
+
+when huge AI model objects are created:
+
+memory allocation matters massively
+object lifecycle matters
+initialization cost matters
+
+That’s why senior engineers understand object creation deeply.
+
+Now You Officially Understand
+class
+object
+self
+instance variables
+internal object creation flow
+
+These are the CORE foundations of all OOP.
+
+Correct. That is the core reason.
+
+Strong interview-style answer:
+
+Yes, car1 and car2 will share wheels because wheels is a class variable, and class variables are stored once at the class level and shared by all objects.
+
+Internal Lookup Flow
+
+When Python sees:
+
+car1.wheels
+
+Python searches in this order:
+
+STEP 1 — Object Namespace
+
+Checks:
+
+car1.__dict__
+
+Does it contain:
+
+wheels
+
+Initially:
+
+No
+STEP 2 — Class Namespace
+
+Then Python checks:
+
+Car.__dict__
+
+Finds:
+
+wheels = 4
+
+Returns:
+
+4
+
+This mechanism is called:
+
+Attribute Resolution / Attribute Lookup
+
+Extremely important advanced Python concept.
+
+REAL CORPORATE EXAMPLE
+
+Suppose at Spotify:
+
+class AudioConfig:
+
+Shared values:
+
+sample_rate
+codec
+streaming_protocol
+
+should be class variables because:
+millions of audio objects use same configuration.
+
+VERY IMPORTANT ADVANCED CONCEPT
+
+Shared does NOT mean immutable.
+
+If class variable changes:
+
+Car.wheels = 6
+
+then ALL objects see updated value.
+
+Example:
+
+print(car1.wheels)
+print(car2.wheels)
+
+Output:
+
+6
+6
+
+unless an object creates its own instance variable shadow.
+
+This leads directly into the next dangerous interview trap.
+
+FINAL QUESTION
+
+What happens internally here?
+
+car1.wheels = 6
+
+Think VERY carefully.
+
+Does it:
+
+modify class variable?
+create instance variable?
+affect car2?
+affect Car.wheels?
+
+This is one of the MOST asked Python OOP interview traps.
+
+create instance variable
+
+Excellent. Correct.
+
+car1.wheels = 6
+
+does NOT modify class variable.
+
+Instead:
+
+Python creates a NEW instance variable inside car1
+Internal Memory Understanding
+
+Initially:
+
+Car.__dict__
+
+contains:
+
+{
+   'wheels': 4
+}
+
+And:
+
+car1.__dict__
+
+contains:
+
+{
+   'brand': 'BMW'
+}
+AFTER THIS
+car1.wheels = 6
+
+Now:
+
+car1.__dict__
+
+becomes:
+
+{
+   'brand': 'BMW',
+   'wheels': 6
+}
+
+Python added:
+
+instance variable wheels
+
+ONLY for car1.
+
+IMPORTANT RESULT
+
+Now:
+
+Access	Result
+car1.wheels	6
+car2.wheels	4
+Car.wheels	4
+WHY?
+
+Because Python lookup order is:
+
+Instance namespace
+Class namespace
+
+Now:
+
+car1.__dict__
+
+already contains:
+
+wheels
+
+So Python stops searching there.
+
+This phenomenon is called:
+
+Variable Shadowing
+
+Huge interview topic.
+
+VISUALIZATION
+
+Before:
+
+Class:
+wheels → 4
+
+car1:
+brand → BMW
+
+car2:
+brand → Audi
+
+After:
+
+Class:
+wheels → 4
+
+car1:
+brand → BMW
+wheels → 6
+
+car2:
+brand → Audi
+REAL INDUSTRY BUG EXAMPLE
+
+This mistake causes major bugs in:
+
+Django apps
+caching systems
+ML configuration objects
+FastAPI dependency containers
+
+Developers think they changed shared config,
+but actually created object-specific shadow variable.
+
+THIS IS SENIOR-LEVEL UNDERSTANDING
+
+Weak developer:
+
+“It changes value.”
+
+Strong engineer:
+
+“It creates an instance-level attribute shadowing the class attribute due to Python’s attribute resolution order.”
+
+That difference matters heavily in interviews.
+
+QUICK TOUGH CHECK
+
+Predict output WITHOUT running code:
+
+class Test:
+
+    x = 10
+
+t1 = Test()
+t2 = Test()
+
+t1.x = 50
+
+print(t1.x)
+print(t2.x)
+print(Test.x)
+
+Think carefully before answering.
+
+50 , 10,10
+
+Correct.
+
+Output:
+
+50
+10
+10
+WHY? — Deep Internal Breakdown
+
+Initially:
+
+class Test:
+
+    x = 10
+
+Class namespace:
+
+Test.__dict__
+
+contains:
+
+x = 10
+Object Creation
+t1 = Test()
+t2 = Test()
+
+Initially:
+
+t1.__dict__ = {}
+t2.__dict__ = {}
+
+No x inside objects yet.
+
+THIS LINE CHANGES EVERYTHING
+t1.x = 50
+
+Python creates:
+
+t1.__dict__['x'] = 50
+
+Now:
+
+t1.__dict__
+
+contains:
+
+{
+   'x': 50
+}
+
+But:
+
+Test.x
+
+still remains:
+
+10
+Lookup Flow
+t1.x
+
+Python checks:
+
+t1.__dict__ → finds x = 50
+Stops searching
+
+Result:
+
+50
+t2.x
+
+Python checks:
+
+t2.__dict__ → no x
+Test.__dict__ → finds x = 10
+
+Result:
+
+10
+THIS IS A HUGE PYTHON CONCEPT
+
+Python attribute lookup order:
+
+instance namespace
+      ↓
+class namespace
+      ↓
+parent classes (inheritance)
+
+This mechanism powers:
+
+inheritance
+polymorphism
+descriptors
+properties
+Django ORM
+FastAPI internals
 
 
+Excellent question.
+This is exactly the kind of thinking strong Python engineers develop.
+
+But careful:
+This code is INVALID:
+
+t2.append(200)
+
+Why?
+
+Because:
+
+t2
+
+is a Test object.
+
+And Test object itself has no method:
+
+append()
+
+So Python gives:
+
+AttributeError
+Correct Code Would Be
+t2.data.append(200)
+
+Now let’s analyze it deeply.
+
+Current State Before Append
+
+After this line:
+
+t2.data = [1, 2, 3]
+
+Memory became:
+
+Class:
+data ───► [100]
+
+t2:
+data ───► [1, 2, 3]
+
+Now t2 has its OWN instance variable.
+
+THEN THIS RUNS
+t2.data.append(200)
+
+Python checks:
+
+t2.__dict__
+
+Finds local:
+
+data = [1, 2, 3]
+Modifies THAT list in-place
+
+Now:
+
+t2.data → [1, 2, 3, 200]
+FINAL STATE
+Class:
+data ───► [100]
+
+t2:
+data ───► [1, 2, 3, 200]
+
+So outputs become:
+
+print(t1.data)
+
+Output:
+
+[100]
+print(t2.data)
+
+Output:
+
+[1, 2, 3, 200]
+print(Test.data)
+
+Output:
+
+[100]
+VERY IMPORTANT CONCEPT
+
+Once instance variable is created:
+
+t2.data = ...
+
+it completely shadows class variable for that object.
+
+After that:
+
+t2 no longer uses shared class list
+it uses its own private list
+THIS IS CRITICAL IN:
+backend systems
+caching
+ML model states
+web frameworks
+multithreading
+
+because shared mutable state can create terrifying bugs in production systems.
+
+REAL CORPORATE EXAMPLE
+
+Suppose engineers at Stripe accidentally share mutable payment cache across requests.
+
+One request modifies cache.
+Other users see wrong transaction data.
+
+This is how severe mutable shared-state bugs happen.
+
+You’re now learning:
+
+object namespaces
+class namespaces
+shadowing
+mutable references
+attribute resolution
+
+These are REAL Python engineering concepts.
+
+okk but two variable name data is allowed??
+
+
+YES. Excellent observation.
+This is one of the most important Python namespace concepts.
+
+Python allows same variable name in:
+
+class namespace
+instance namespace
+
+because they are:
+
+different namespaces
+Understand This Properly
+class Test:
+
+    data = []
+
+This creates:
+
+Class Namespace:
+{
+   'data': []
+}
+
+Then:
+
+t2.data = [1, 2, 3]
+
+creates:
+
+Instance Namespace:
+{
+   'data': [1, 2, 3]
+}
+
+Now BOTH exist simultaneously.
+
+VERY IMPORTANT
+
+These are NOT the same variable.
+
+They only share same name.
+
+Internally:
+
+Namespace	Variable
+Class Namespace	Test.data
+Instance Namespace	t2.data
+
+Different storage locations in memory.
+
+VISUALIZATION
+Class:
+------
+data ───► [100]
+t2 Object:
+----------
+data ───► [1, 2, 3]
+
+Same name.
+Different memory.
+Different namespaces.
+
+THIS IS CALLED
+Variable Shadowing
+
+Instance variable:
+
+t2.data
+
+shadows:
+
+Test.data
+
+for that specific object.
+
+Python Lookup Rule
+
+When Python sees:
+
+t2.data
+
+it searches:
+
+instance namespace
+class namespace
+parent classes
+
+Since instance namespace already contains:
+
+data
+
+Python stops there.
+
+REAL CORPORATE EXAMPLE
+
+Suppose at Meta:
+
+class UserConfig:
+
+Shared config:
+
+theme = "light"
+
+But one user customizes:
+
+user1.theme = "dark"
+
+Now:
+
+UserConfig.theme still "light"
+only user1 overrides it
+
+This is same concept.
+
+VERY IMPORTANT INTERVIEW INSIGHT
+
+Python does NOT “overwrite” class variable here.
+
+It creates:
+
+separate instance attribute
+
+This distinction is critical.
+
+DEEPER PYTHON INTERNALS
+
+Every object usually has:
+
+__dict__
+
+Example:
+
+print(t2.__dict__)
+
+Output:
+
+{
+   'data': [1, 2, 3]
+}
+
+And:
+
+print(Test.__dict__)
+
+contains class attributes.
+
+Completely separate dictionaries.
+
+This namespace model is foundational for:
+
+inheritance
+descriptors
+properties
+ORM systems
+Django internals
+FastAPI dependency injection
+metaprogramming
+
+You are now learning actual Python object model concepts.
+
+ok u  mean no two class variable can have same name and same for instance right
+
+Not exactly. Careful here.
+
+Python DOES allow same names in many places because namespaces are separate.
+
+Let’s make this crystal clear.
+
+1. Inside SAME CLASS
+
+You CANNOT have two class variables with same name meaningfully.
+
+Example:
+
+class Test:
+
+    x = 10
+    x = 20
+
+Final value becomes:
+
+20
+
+Because second assignment overwrites first one in SAME namespace.
+
+So inside one namespace:
+
+duplicate names overwrite old values
+2. Inside SAME OBJECT
+
+Same thing:
+
+self.name = "Saurabh"
+self.name = "Rahul"
+
+Final value:
+
+Rahul
+
+because same namespace again.
+
+3. BUT Different Namespaces CAN Have Same Name
+
+THIS is the important part.
+
+Example:
+
+class Test:
+
+    data = []
+
+and later:
+
+t1.data = [1, 2]
+
+Now:
+
+class namespace has data
+instance namespace also has data
+
+Allowed because:
+
+different namespaces
+Think Like Folders
+
+Imagine:
+
+Class Folder:
+data.txt
+
+and:
+
+Object Folder:
+data.txt
+
+Same filename allowed because:
+different folders.
+
+Excellent mental model.
+
+IMPORTANT RULE
+Situation	Allowed?
+Same name in SAME namespace	overwrites
+Same name in DIFFERENT namespaces	allowed
+Python Namespace Hierarchy
+
+Python objects can search through multiple namespaces:
+
+instance namespace
+      ↓
+class namespace
+      ↓
+parent class namespace
+
+This is why shadowing works.
+
+VERY IMPORTANT INTERVIEW QUESTION
+
+What is a namespace?
+
+Strong answer:
+
+A namespace is a mapping between names and objects.
+
+Usually implemented internally using dictionaries.
+
+Example:
+
+obj.__dict__
+
+stores object namespace.
+
+
+Attribute
+
+An attribute is:
+
+a variable attached to an object or class
+
+Example:
+
+class Car:
+
+    wheels = 4
+
+    def __init__(self, brand):
+        self.brand = brand
+
+Here:
+
+wheels → class attribute
+brand → instance attribute
+Accessing Attributes
+car1.brand
+car1.wheels
+
+Both are attribute access.
+
+Simple Definition
+Type	Meaning
+Instance Attribute	Belongs to object
+Class Attribute	Belongs to class
+Real World Example
+
+For a user object:
+
+user.name
+user.email
+user.age
+
+These are attributes of user object.
+
+tht differnece bwteeen attributes and variables
+
+Excellent question. This distinction is important in interviews.
+
+Variable vs Attribute
+Variable
+
+A variable is:
+
+a general name that stores a value
+
+Example:
+
+x = 10
+name = "Saurabh"
+
+Here:
+
+x
+name
+
+are normal variables.
+
+Attribute
+
+An attribute is:
+
+a variable attached to an object or class using dot notation (.)
+
+Example:
+
+car.brand = "BMW"
+
+Here:
+
+brand is attribute of car
+
+Accessed using:
+
+object.attribute
+SIMPLE RULE
+Thing	Example
+Variable	x = 10
+Attribute	car.brand = "BMW"
+IMPORTANT
+
+All attributes are variables,
+but not all variables are attributes.
+
+Real OOP Understanding
+class Employee:
+
+    company = "Google"
+
+    def __init__(self, name):
+        self.name = name
+Name	Type
+company	class attribute
+self.name	instance attribute
+name parameter	local variable
 
 
 

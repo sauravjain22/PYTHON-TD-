@@ -3511,12 +3511,57 @@ import re
 #     print(Data)
 
 
-principal = float(input("Enter principal amount: "))
-Rate = float(input("Enter rate amount: "))
-Time = float(input("Enter Time in years: "))
+# principal = float(input("Enter principal amount: "))
+# Rate = float(input("Enter rate amount: "))
+# Time = float(input("Enter Time in years: "))
 
-Simple_Intrest = (principal*Rate*Time)/100
+# Simple_Intrest = (principal*Rate*Time)/100
 
 
-print("Simple intrest is: ", Simple_Intrest)
+# print("Simple intrest is: ", Simple_Intrest)
 
+
+# class car:
+#     pass
+# car1 = car()
+# print(car1)
+
+
+# class car:
+
+#     def __init__(self,brand,color):
+#         self.brand = brand
+#         self.color = color
+
+# car1 = car("BMW","Black")
+# print(car1.brand)
+# print(car1.color)
+
+# class Test:
+#     """
+#     this is class test to test some varibale methods
+#     """
+#     data = []
+
+# t1 = Test()
+# t2 = Test()
+# t1.data.append(100)
+# t2.data = [1,2,3]
+# print(t1.data)
+# print(t2.data)
+# print(Test.data)
+# print(Test.__doc__)
+
+# class Student:
+#     pass
+
+# s1 = Student()
+# s2 = Student()
+# s1.name = "Saurabh"
+# s1.salary = 30000
+# print(s1.name)
+# # print(s2.salary)
+# # print(s1.__dict__)
+# dict_of_s1 = s1.__dict__ 
+# print(dict_of_s1)
+# print(type(dict_of_s1))
