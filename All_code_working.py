@@ -3565,3 +3565,171 @@ import re
 # dict_of_s1 = s1.__dict__ 
 # print(dict_of_s1)
 # print(type(dict_of_s1))
+
+# class Student:
+
+#     def __str__(self):
+#         return "Student object"
+    
+# s1 = Student()
+# print(s1)
+
+
+# class employee:
+#     def __init__(self,name,salary):
+#         self.name = name
+#         self.salary = salary
+#     def show_details(self):
+#         print(self.name)
+#         print(self.salary)
+
+# emp1 = employee("Saurabh",50000)
+# emp1.show_details()
+
+# class Bankaccount:
+#     bank_name = "IDFC"
+
+#     def __init__(self,holder,balance):
+#         self.holder = holder
+#         self.balance = balance
+#     def deposit(self,amount):
+#         self.balance+= amount
+#     def show_balance(self):
+#         print(self.balance)
+
+# user1 = Bankaccount("Saurabh",5000)
+# user1.deposit(3000)
+# user1.show_balance()
+
+# class Person:
+
+#     def __str__(self):
+#         return "Person object"
+    
+# p1 = Person()
+# print(p1)
+
+# class student:
+#     def __init__(self,n_hours):
+#         print(f"The self is {self}")
+#         print(f"The studne studies for {n_hours}")
+    
+#     def sports(self,sname):
+#         print(f"Student {self} plays {sname}")
+
+# s1 = student(3)
+# print(f"The object of s1 is {s1}")
+# s1.sports("Tennis")
+# print("-----------------------------------------")
+
+# s2 = student(5)
+# print(f"The object of s2 is {s2}")
+# s2.sports("Pickleball")
+
+
+# class student:
+#     def __init__(self,name,roll_no,dept):
+#         self.name = name
+#         self.roll_no = roll_no
+#         self.dept = dept
+#         print(self.name,self.roll_no,self.dept)
+    
+#     def study(self,n_hours):
+#         print(f"The student studies for {n_hours} hours")
+
+#     def Hobby(self,hobby):
+#         print(f"The student like to  play {hobby}")
+    
+# s1 = student("Saurabh",100,"BSC_IT")
+# s1.study(5)
+# s1.Hobby("Tennis")
+
+
+# class Employee:
+
+#     company = "Tescom"
+
+#     @classmethod
+#     def show_company(cls):
+#         print(cls.company)
+
+# Employee.show_company()
+
+# class Company:
+
+#     company_name = "Infosys"
+
+#     @classmethod
+#     def change_company(cls,new_name):
+#         if len(new_name) < 5:
+#             print("Length is too short not allowed")
+#             return
+#         cls.company_name = new_name
+        
+
+# Company.change_company("ABCDE")
+# print(Company.company_name)
+
+        
+# class calculator:
+
+#     @staticmethod
+#     def add(a,b):
+#         return a + b
+    
+# print(calculator.add(10,20))
+
+# class PaymentValidator:
+
+#     @staticmethod
+#     def validate(amount):
+
+#         return amount > 0
+    
+
+# print(PaymentValidator.validate(5000))
+
+# class Test:
+#     x = 10
+
+#     @staticmethod
+#     def show_det():
+#         Test.x = 50
+
+
+# t1 = Test()
+# t2 = Test()
+# # t2.show_det()
+# # print(t1.x)
+# # print(t2.x)
+# # print(Test.x)
+
+# print(staticmethod.__dict__)
+
+# class Contact:
+#     phone_directory = []
+
+#     def __init__(self,name,Phone_number):
+#         self.name = name
+#         self.Phone_number = Phone_number
+#         Contact.phone_directory.append(self)
+
+#     def show_contact(self):
+#         return f"Name : {self.name}, Phone number : {self.Phone_number}"
+    
+#     @classmethod
+#     def show_all_contact(cls):
+#         if len(cls.phone_directory) == 0:
+#             print(f"No contact found")
+#         else:
+#             for contact in cls.phone_directory:
+#                 print(contact.show_contact())
+
+    
+# c1 = Contact("Saurabh",9403338964)
+# c2 = Contact("Tarun",8275461815)
+
+# print(c1.show_contact())
+# print(c2.show_contact())
+    
+# Contact.show_all_contact()

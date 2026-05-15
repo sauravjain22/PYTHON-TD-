@@ -18313,7 +18313,1194 @@ company	class attribute
 self.name	instance attribute
 name parameter	local variable
 
+Perfect. These are the two most important dunder methods for understanding object creation.
 
+1. __new__()
+
+Purpose:
+
+Creates the object in memory
+
+It runs:
+
+FIRST
+2. __init__()
+
+Purpose:
+
+Initializes the object
+
+It runs:
+
+AFTER __new__()
+SIMPLE FLOW
+
+When you do:
+
+obj = Employee()
+
+Python internally does:
+
+1. __new__()
+2. __init__()
+EASY REAL-WORLD ANALOGY
+
+Imagine building a house.
+
+__new__()
+
+Means:
+
+constructing empty house structure
+
+Walls created.
+Memory allocated.
+
+But house still empty.
+
+__init__()
+
+Means:
+
+adding furniture and setup
+bed
+TV
+lights
+sofa
+
+Now house becomes usable.
+
+SIMPLE PYTHON EXAMPLE
+class Test:
+
+    def __new__(cls):
+        print("Object Created")
+        return super().__new__(cls)
+
+    def __init__(self):
+        print("Object Initialized")
+
+t1 = Test()
+
+Output:
+
+Object Created
+Object Initialized
+IMPORTANT DIFFERENCE
+Method	Purpose
+__new__()	Creates object
+__init__()	Adds data/setup
+MOST IMPORTANT THING
+
+Normally in beginner/intermediate Python:
+
+you mostly write __init__()
+Python automatically handles __new__()
+REAL INDUSTRY USE OF __new__()
+
+Advanced engineers use it for:
+
+Singleton pattern
+Immutable objects
+Custom object creation
+Metaclasses
+
+Very advanced topics.
+
+So for now:
+focus mainly on:
+
+__init__()
+
+but remember:
+
+actual object creation happens in __new__() first.
+
+Excellent. Correct.
+
+It will print something like:
+
+<__main__.Test object at 0x000001A2B3C4>
+
+Exact memory address will differ.
+
+WHY?
+
+Because:
+
+self
+
+refers to:
+
+current object (t1)
+
+And:
+
+print(self)
+
+prints object representation.
+
+Since we did NOT define:
+
+__str__()
+
+Python uses default object representation.
+
+INTERNAL FLOW
+
+When this runs:
+
+t1.show()
+
+Python internally does:
+
+Test.show(t1)
+
+So:
+
+self = t1
+
+Then:
+
+print(t1)
+
+prints memory-style representation.
+
+VERY IMPORTANT INSIGHT
+
+This proves:
+
+self is actual object reference
+
+Not keyword magic.
+
+Real object reference.
+
+QUICK ADVANCED NOTE
+
+If we define:
+
+def __str__(self):
+
+then:
+
+print(self)
+
+would use custom string representation instead.
+
+REAL CORPORATE IMPORTANCE
+
+Logging systems in companies often print objects for:
+
+debugging
+tracing
+monitoring
+
+Good engineers implement proper:
+
+__str__()
+
+or:
+
+__repr__()
+
+for readable logs.
+
+Now next important thing in instance methods:
+
+Calling one instance method from another instance method
+
+This is heavily used in production systems.
+
+so can i say in class an function is an instance methods of class
+
+Almost correct — but not every function inside class is an instance method.
+
+This is VERY important.
+
+Correct Statement
+
+A function inside a class that takes self as first parameter is called an instance method.
+
+Example
+class Employee:
+
+    def show(self):
+        print("Hello")
+
+Here:
+
+show()
+
+is an:
+
+instance method
+
+because it works with object (self).
+
+BUT NOT ALL FUNCTIONS INSIDE CLASS ARE INSTANCE METHODS
+
+Later you’ll learn:
+
+class methods
+static methods
+
+Example:
+
+class Test:
+
+    @staticmethod
+    def hello():
+        print("Hello")
+
+This is NOT instance method.
+
+SIMPLE RULE FOR NOW
+
+If method has:
+
+self
+
+then currently treat it as:
+
+instance method
+VERY IMPORTANT TERMINOLOGY
+
+Inside class:
+
+technically called “methods”
+outside class:
+usually called “functions”
+Interview-Level Understanding
+Term	Meaning
+Function	standalone callable
+Method	function associated with class/object
+REAL PYTHON INTERNAL TRUTH
+
+Methods are actually functions internally,
+but Python binds object automatically.
+
+That’s why:
+
+t1.show()
+
+internally becomes:
+
+Test.show(t1)
+
+This automatic binding creates method behavior.
+
+BEST WAY TO SAY IT
+
+Instead of:
+
+“Function in class is instance method”
+
+say:
+
+“A method inside class that operates on object state using self is called an instance method.”
+
+That sounds much stronger in interviews.
+
+class Person:
+
+    def __str__(self):
+        print(self)
+    
+p1 = Person()
+p1.__str__
+
+Excellent. This question touches Python method objects and binding behavior.
+
+Your code:
+
+class Person:
+
+    def __str__(self):
+        print(self)
+    
+p1 = Person()
+
+p1.__str__
+FIRST IMPORTANT THING
+
+This line:
+
+p1.__str__
+
+does NOT execute method.
+
+It only:
+
+accesses method object
+Output?
+
+In interactive Python/shell, you may see something like:
+
+<bound method Person.__str__ of <__main__.Person object at 0x...>>
+WHAT IS "BOUND METHOD"?
+
+Very important concept.
+
+When you access:
+
+p1.__str__
+
+Python automatically binds:
+
+self = p1
+
+So method becomes attached/bound to that object.
+
+Hence:
+
+bound method
+METHOD IS NOT CALLED YET
+
+Because you did NOT use:
+
+()
+TO EXECUTE METHOD
+
+You must do:
+
+p1.__str__()
+BUT NOW BIG PROBLEM OCCURS
+
+Your method:
+
+def __str__(self):
+    print(self)
+
+creates:
+
+infinite recursion
+WHY?
+
+Because:
+
+print(self)
+
+internally tries to call:
+
+self.__str__()
+
+again.
+
+Which again does:
+
+print(self)
+
+Which again calls:
+
+__str__()
+
+Infinite loop.
+
+Eventually:
+
+RecursionError
+
+occurs.
+
+CORRECT __str__() SHOULD RETURN STRING
+
+Correct:
+
+class Person:
+
+    def __str__(self):
+        return "Person Object"
+
+Now:
+
+print(p1)
+
+works correctly.
+
+VERY IMPORTANT RULE
+
+__str__() must:
+
+return string
+
+NOT print.
+
+INTERNAL FLOW
+
+When this runs:
+
+print(p1)
+
+Python internally does:
+
+print(p1.__str__())
+
+That’s why returning string is necessary.
+
+Class Methods
+
+This is a VERY important OOP topic.
+
+Companies ask this frequently because it tests whether you truly understand:
+
+class vs instance
+object model
+shared state
+method binding
+FIRST UNDERSTAND THE NEED
+
+Instance methods work with:
+
+object data
+
+using:
+
+self
+
+But sometimes we want method to work with:
+
+class-level data
+
+NOT individual objects.
+
+That is where:
+
+class methods
+
+come in.
+
+Basic Syntax
+@classmethod
+
+decorator is used.
+
+Example
+class Employee:
+
+    company = "Google"
+
+    @classmethod
+    def show_company(cls):
+        print(cls.company)
+Calling Class Method
+Employee.show_company()
+
+Output:
+
+Google
+IMPORTANT DIFFERENCE
+Method Type	First Parameter
+Instance Method	self
+Class Method	cls
+WHAT IS cls ?
+
+cls refers to:
+
+current class
+
+Similar to:
+
+self
+
+for objects.
+
+INTERNAL UNDERSTANDING
+
+When this runs:
+
+Employee.show_company()
+
+Python internally does something similar to:
+
+Employee.show_company(Employee)
+
+So:
+
+cls = Employee
+WHY USE CLASS METHODS?
+
+Because sometimes behavior belongs to:
+
+class itself
+
+not individual object.
+
+REAL CORPORATE EXAMPLE
+
+Suppose at Amazon:
+
+class Employee:
+
+Shared company policies:
+
+company name
+tax rules
+hiring rules
+
+may be managed using class methods.
+
+IMPORTANT CAPABILITY
+
+Class methods can access:
+
+class variables
+other class methods
+
+But NOT direct instance variables unless object provided.
+
+Example
+class Employee:
+
+    company = "Google"
+
+    @classmethod
+    def change_company(cls, new_name):
+        cls.company = new_name
+
+Now:
+
+Employee.change_company("Microsoft")
+
+Changes shared class variable.
+
+HUGE DIFFERENCE FROM INSTANCE METHOD
+
+Instance method modifies:
+
+specific object state
+
+Class method modifies:
+
+shared class state
+VERY IMPORTANT INTERVIEW QUESTION
+
+Can class method access instance variables directly?
+
+Answer:
+
+No
+
+Because class itself does not know specific object state.
+
+THIS WILL FAIL
+class Test:
+
+    def __init__(self):
+        self.x = 10
+
+    @classmethod
+    def show(cls):
+        print(self.x)
+
+Why?
+Because:
+
+self
+
+does not exist here.
+
+No object context.
+
+What is a Static Method?
+
+A static method is:
+
+a method inside class that does NOT work with:
+
+object (self)
+class (cls)
+
+It is just:
+
+utility/helper logic related to class
+Syntax
+@staticmethod
+Example
+class Calculator:
+
+    @staticmethod
+    def add(a, b):
+        return a + b
+Calling Static Method
+Calculator.add(10, 20)
+
+Output:
+
+30
+IMPORTANT
+
+Static method:
+
+does NOT receive self
+does NOT receive cls
+WHY KEEP IT INSIDE CLASS THEN?
+
+Excellent engineering question.
+
+Because method is:
+
+logically related to class
+
+even though it doesn’t need object/class state.
+
+REAL CORPORATE EXAMPLE
+
+Suppose at PayPal:
+
+class PaymentValidator:
+
+Validation utility:
+
+validate_card_number()
+
+doesn’t need:
+
+object data
+class data
+
+But logically belongs to payment system.
+
+So static method makes sense.
+
+Example
+class PaymentValidator:
+
+    @staticmethod
+    def validate(amount):
+
+        return amount > 0
+KEY DIFFERENCE
+Method Type	Receives
+Instance Method	self
+Class Method	cls
+Static Method	nothing automatic
+INTERNAL UNDERSTANDING
+
+When this runs:
+
+Calculator.add(10, 20)
+
+Python does NOT pass:
+
+object
+class
+
+Unlike:
+
+obj.method()
+
+or:
+
+Class.class_method()
+STATIC METHODS ARE BASICALLY NORMAL FUNCTIONS
+
+But grouped inside class for:
+
+organization
+readability
+architecture clarity
+REAL INDUSTRY USE CASES
+
+Static methods commonly used for:
+
+validation
+formatting
+conversion utilities
+helper logic
+mathematical utilities
+parsing helpers
+REAL ML/DATA SCIENCE EXAMPLE
+
+Suppose at NVIDIA:
+
+class TensorUtils:
+
+Static methods may handle:
+
+normalization
+scaling
+shape validation
+
+No object state needed.
+
+VERY IMPORTANT INTERVIEW QUESTION
+
+When should static method be used?
+
+Strong answer:
+
+Use static methods when logic is related to class conceptually but does not require access to instance state (self) or class state (cls).
+
+DIFFERENCE BETWEEN ALL 3 METHODS
+Feature	Instance Method	Class Method	Static Method
+Uses object state	Yes	No	No
+Uses class state	Yes	Yes	No
+First parameter	self	cls	none
+Main purpose	object behavior	class behavior	utility/helper logic
+
+REAL INTERVIEW QUESTION
+
+Predict output carefully:
+
+class Test:
+
+    x = 100
+
+    @staticmethod
+    def show():
+        print(Test.x)
+
+t1 = Test()
+
+t1.show()
+
+What prints and WHY?
+
+throw an error
+
+No — it will NOT throw error.
+
+Output:
+
+100
+WHY?
+
+Because inside static method:
+
+print(Test.x)
+
+directly accesses:
+
+class variable using class name
+
+No need for:
+
+self
+cls
+VERY IMPORTANT
+
+Static methods CAN access class variables,
+but only:
+
+manually
+
+using class name.
+
+This Works
+class Test:
+
+    x = 100
+
+    @staticmethod
+    def show():
+        print(Test.x)
+
+Because:
+
+Test.x
+
+is valid normal class access.
+
+THIS WOULD FAIL
+@staticmethod
+def show():
+    print(cls.x)
+
+OR
+
+@staticmethod
+def show():
+    print(self.x)
+
+Because static methods receive:
+
+neither self nor cls
+
+IMPORTANT INTERVIEW INSIGHT
+
+Static methods are NOT isolated from class.
+
+They simply:
+
+don’t receive automatic references
+
+You can still manually use:
+
+ClassName.variable
+
+inside them.
+
+REAL CORPORATE EXAMPLE
+class TaxCalculator:
+
+    TAX_RATE = 18
+
+    @staticmethod
+    def calculate_tax(amount):
+
+        return amount * TaxCalculator.TAX_RATE / 100
+
+No object state needed.
+
+But logic still related to class.
+
+VERY IMPORTANT DESIGN INSIGHT
+
+If static method heavily uses:
+
+ClassName.something
+
+then often:
+
+class method may be better design
+
+TOUGH INTERVIEW-STYLE QUESTION
+
+Predict output carefully:
+
+class Test:
+
+    x = 10
+
+    @staticmethod
+    def change():
+        Test.x = 50
+
+t1 = Test()
+t2 = Test()
+
+t1.change()
+
+print(t1.x)
+print(t2.x)
+print(Test.x)
+
+Think carefully:
+
+shared class variable
+static method behavior
+namespace modification
+10,10,50
+
+Close — but not correct.
+
+Actual output:
+
+50
+50
+50
+WHY?
+
+This line:
+
+Test.x = 50
+
+modifies:
+
+class variable itself
+
+And:
+
+x
+
+is shared by ALL objects.
+
+IMPORTANT
+
+Neither t1 nor t2 has its own instance variable:
+
+x
+
+So lookup happens like this:
+
+t1.x
+
+Python checks:
+
+t1.__dict__
+
+No x.
+
+Then checks:
+
+Test.__dict__
+
+Finds:
+
+x = 50
+
+Output:
+
+50
+SAME FOR t2.x
+
+No local x,
+so class variable used.
+
+Output:
+
+50
+VERY IMPORTANT INSIGHT
+
+Static method did NOT create instance variables.
+
+It directly modified:
+
+class namespace
+
+using:
+
+Test.x = 50
+REAL INTERVIEW LESSON
+
+Object access:
+
+t1.x
+
+does NOT always mean instance variable.
+
+Python searches:
+
+instance namespace
+class namespace
+inheritance chain
+
+This lookup mechanism is fundamental Python internals knowledge
+
+Your code is actually a mini real-world contact manager.
+
+YOUR FULL CODE
+class Contact:
+
+    phone_directory = []
+
+    def __init__(self,name,Phone_number):
+        self.name = name
+        self.Phone_number = Phone_number
+        Contact.phone_directory.append(self)
+
+    def show_contact(self):
+        return f"Name : {self.name}, Phone number : {self.Phone_number}"
+    
+    @classmethod
+    def show_all_contact(cls):
+        if len(cls.phone_directory) == 0:
+            print(f"No contact found")
+        else:
+            for contact in cls.phone_directory:
+                print(contact.show_contact())
+
+    
+c1 = Contact("Saurabh",9403338964)
+c2 = Contact("Tarun",8275461815)
+
+print(c1.show_contact())
+print(c2.show_contact())
+    
+Contact.show_all_contact()
+STEP 1 — CLASS CREATION
+class Contact:
+
+You created:
+
+blueprint/template
+
+for making contact objects.
+
+Think:
+
+“This class knows how contacts should behave.”
+
+STEP 2 — CLASS VARIABLE
+phone_directory = []
+
+This is:
+
+class variable
+
+Meaning:
+
+one shared list
+common for ALL contacts
+
+Think:
+
+“Main phonebook.”
+
+IMPORTANT
+
+This list is created:
+
+only ONCE
+
+NOT for every object.
+
+STEP 3 — __init__()
+def __init__(self,name,Phone_number):
+
+Runs automatically when object is created.
+
+OBJECT CREATION
+c1 = Contact("Saurabh",9403338964)
+
+Python internally roughly does:
+
+1. create empty object
+2. self = c1
+3. name = "Saurabh"
+4. Phone_number = 9403338964
+5. run __init__()
+STEP 4 — INSTANCE VARIABLES
+self.name = name
+self.Phone_number = Phone_number
+
+Now object stores personal data.
+
+So:
+
+c1.name → "Saurabh"
+c1.Phone_number → 9403338964
+VERY IMPORTANT
+
+Each object gets its OWN data.
+
+Example:
+
+c2.name → "Tarun"
+
+Separate object.
+Separate values.
+
+STEP 5 — MOST IMPORTANT LINE
+Contact.phone_directory.append(self)
+
+This means:
+
+“Add current object into shared phone directory.”
+
+FOR c1
+
+This becomes:
+
+Contact.phone_directory.append(c1)
+FOR c2
+
+This becomes:
+
+Contact.phone_directory.append(c2)
+NOW DIRECTORY BECOMES
+[c1, c2]
+
+Very important:
+You are storing:
+
+OBJECTS
+
+not strings.
+
+VISUALIZATION
+phone_directory
+       ↓
+[c1, c2]
+EACH OBJECT CONTAINS
+c1:
+name = Saurabh
+Phone_number = 9403338964
+c2:
+name = Tarun
+Phone_number = 8275461815
+STEP 6 — INSTANCE METHOD
+def show_contact(self):
+
+This method works with:
+
+one specific object
+EXAMPLE
+c1.show_contact()
+
+Python internally does:
+
+Contact.show_contact(c1)
+
+So:
+
+self = c1
+RETURN VALUE
+return f"Name : {self.name}, Phone number : {self.Phone_number}"
+
+For c1:
+
+Name : Saurabh, Phone number : 9403338964
+STEP 7 — CLASS METHOD
+@classmethod
+def show_all_contact(cls):
+
+This method works with:
+
+shared class data
+
+NOT one specific object.
+
+That’s why class method makes sense.
+
+cls MEANS
+Contact
+
+class itself.
+
+THIS CHECK
+if len(cls.phone_directory) == 0:
+
+Checks:
+
+“Is phonebook empty?”
+
+LOOP
+for contact in cls.phone_directory:
+
+Now:
+
+contact
+
+becomes:
+
+first c1
+then c2
+
+one-by-one.
+
+THIS LINE
+print(contact.show_contact())
+
+calls instance method for each object.
+
+So:
+
+c1.show_contact()
+c2.show_contact()
+
+run internally.
+
+FINAL OUTPUT
+Name : Saurabh, Phone number : 9403338964
+Name : Tarun, Phone number : 8275461815
+MOST IMPORTANT THINGS YOU SHOULD REMEMBER
+Concept	Used In Your Code
+Class	Contact
+Objects	c1, c2
+Class Variable	phone_directory
+Instance Variables	self.name, self.Phone_number
+Instance Method	show_contact()
+Class Method	show_all_contact()
+self	current object
+cls	current class
+THIS IS ACTUALLY GOOD OOP PRACTICE
+
+Because you separated:
+
+object-specific behavior
+class-wide behavior
 
 
 
