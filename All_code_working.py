@@ -3706,30 +3706,3 @@ import re
 
 # print(staticmethod.__dict__)
 
-# class Contact:
-#     phone_directory = []
-
-#     def __init__(self,name,Phone_number):
-#         self.name = name
-#         self.Phone_number = Phone_number
-#         Contact.phone_directory.append(self)
-
-#     def show_contact(self):
-#         return f"Name : {self.name}, Phone number : {self.Phone_number}"
-    
-#     @classmethod
-#     def show_all_contact(cls):
-#         if len(cls.phone_directory) == 0:
-#             print(f"No contact found")
-#         else:
-#             for contact in cls.phone_directory:
-#                 print(contact.show_contact())
-
-    
-# c1 = Contact("Saurabh",9403338964)
-# c2 = Contact("Tarun",8275461815)
-
-# print(c1.show_contact())
-# print(c2.show_contact())
-    
-# Contact.show_all_contact()
