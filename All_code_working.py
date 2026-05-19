@@ -3706,3 +3706,195 @@ import re
 
 # print(staticmethod.__dict__)
 
+# class Animal:
+    
+#     def eat():
+#         print("Animal is eating")
+
+# class Dog(Animal):
+#     pass
+
+
+# d1 = Dog
+# d1.eat()
+
+# class Person:
+
+#     def __init__(self,name):
+#         self.name = name
+
+# class Student(Person):
+#     pass
+
+# s1 = Student("Saurabh")
+# print(s1.name)
+
+# class Vehicle:
+
+#     company = "XYZ"
+
+#     def __init__(self,wheels,seats,mileage):
+#         print("init of vehicle")
+#         self.wheels = wheels
+#         self.seats = seats
+#         self.mileage = mileage
+
+#     def show_details(self):
+#         return f"The vehicle hass {self.wheels} wheels , {self.seats} seats and mileage of {self.mileage}"
+    
+
+# class Car(Vehicle):
+
+#     trademark = "Tesla"
+    
+#     def __init__(self, car_type,drive_type):
+#         print("init of car")
+#         self.car_type = car_type
+#         self.drive_type = drive_type
+#         super().__init__(wheels=4,seats=5,mileage=30)
+
+# c1 = Car("Elctric","Manual")
+# print(c1.show_details())
+# print(c1.__dict__)
+
+# class Employee:
+#     def login(self):
+#         print("Logged in")
+#     def logout(self):
+#         print("logged out")
+
+# class Data_sciencetist(Employee):
+#     def Train_model(self):
+#         print("Your work is to train model")
+
+# DS_1 = Data_sciencetist()
+# DS_1.login()
+# DS_1.Train_model()
+
+# class Employee:
+#     def login(self,name):
+#         print(f"{name} logged in")
+#     def logout(self,name):
+#         print("Employee logged out")
+
+# class Developer(Employee):
+#     def write_code(self):
+#         print("Writing your code")
+
+# class Backend_developer(Developer):
+#     def create_database(self):
+#         print("Creating database")
+
+
+# EMP1 = Backend_developer()
+# EMP1.login("Saurabh")
+# EMP1.write_code()
+# EMP1.create_database()
+
+# class Camera:
+#     def click_photo(self):
+#         print("Photo clicked")
+    
+# class GPS:
+#     def trace_location(self):
+#         print("Tracing location")
+
+# class Smartphone(Camera,GPS):
+#     pass
+
+
+# S1 = Smartphone()
+# S1.click_photo()
+# S1.trace_location()
+
+# a = 1
+# b = 2
+# print(a + b)
+
+# First_name = "Saurabh"
+# Last_name = "jain"
+# print(First_name + " " + Last_name)
+# import pandas
+# help(pandas.DataFrame)
+
+# a = {1,2,3,4}
+# # print(dir(a))
+# print(type(a))
+
+# class Employee:
+
+#     def __str__(self):
+#         return f"This is exceuted and will be printed as string not memmory adress"
+    
+# e1 = Employee()
+# print(e1)
+
+# class Number:
+
+#     def __init__(self, value):
+#         self.value = value
+
+#     def __add__(self, other):
+
+#         return self.value + other.value
+
+
+# n1 = Number(10)
+# n2 = Number(20)
+
+# print(n1 + n2)
+
+# class Rectangle:
+
+#     def __init__(self,length,breadth):
+#         self.length = length
+#         self.breadth = breadth
+    
+#     def area(self):
+#         return self.length*self.breadth
+    
+#     def __add__(self, other):
+#         return self.area() + other.area()
+        
+#     def __str__(self):
+#         return f"The total area is {r3} "
+    
+# r1 = Rectangle(5,7)
+# r2 = Rectangle(8,5)
+# # r3 = Rectangle(10,10)
+# print(r1.area())
+# print(r2.area())
+# r3 = r1 + r2
+# # print(r1 + r2)
+# print(r3)
+
+
+class Rectangle:
+
+    def __init__(self, length, breadth):
+
+        self.length = length
+        self.breadth = breadth
+
+    def area(self):
+
+        return self.length * self.breadth
+
+    def __add__(self, other):
+
+        total_area = self.area() + other.area()
+
+        return Rectangle(total_area, 1)
+
+    def __str__(self):
+
+        return f"The total area is {self.area()}"
+
+
+r1 = Rectangle(5,7)
+r2 = Rectangle(8,5)
+r3 = Rectangle(10,10)
+r4 = Rectangle(10,10)
+
+print(r1 + r2 + r3 + r4)
+
